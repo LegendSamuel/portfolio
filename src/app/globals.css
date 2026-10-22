@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-deep: #0B0818;
+    --bg-violet: #1A1033;
+    --card-primary: #5B3FD1;
+    --card-highlight: #7B5CFF;
+    --accent-magenta: #E0529C;
+    --accent-pink: #F5A3C7;
+    --glow-amber: #FFB347;
+    --glow-orange: #FF7A3D;
+    --sunset-pink: #F7A8C4;
+    --sunset-lavender: #B79CFF;
+    --sunset-dark: #120A24;
+    --text-primary: #F4EEFF;
+    --text-muted: rgba(244, 238, 255, 0.65);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+  }
+
+  body {
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+}
+
+/* Typography Utility Classes */
+.font-display {
+  font-family: var(--font-cinzel), Georgia, serif;
+  letter-spacing: 0.03em;
+  line-height: 1.08;
+}
+
+.font-logotype {
+  font-family: var(--font-cinzel), Georgia, serif;
+  letter-spacing: 0.3em;
+  font-weight: 800;
+}
+
+.font-condensed {
+  font-family: var(--font-barlow-condensed), sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.eyebrow-red {
+  font-family: var(--font-barlow-condensed), sans-serif;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #F5A3C7;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Film Grain Texture */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Vignette Shadow Overlay */
+.vignette-overlay {
+  background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(5, 3, 12, 0.75) 90%, rgba(3, 2, 8, 0.95) 100%);
+  pointer-events: none;
+}
+
+/* Card Glow & Shadows */
+.glow-card {
+  box-shadow: 0 10px 40px -10px rgba(91, 63, 209, 0.4), 0 0 25px rgba(224, 82, 156, 0.15);
+  border: 1px solid rgba(123, 92, 255, 0.4);
+}
+
+.glow-card:hover {
+  box-shadow: 0 20px 60px -10px rgba(123, 92, 255, 0.6), 0 0 35px rgba(245, 163, 199, 0.35);
+  border-color: rgba(245, 163, 199, 0.7);
+}
+
+/* Warm Lantern Glow */
+.lantern-glow {
+  box-shadow: 0 0 80px 30px rgba(255, 179, 71, 0.18), 0 0 140px 60px rgba(255, 122, 61, 0.12);
+}
+
+/* 3D Perspective Flip Cards */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0818;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D1A54;
+  border-radius: 9999px;
+  border: 1px solid rgba(123, 92, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7B5CFF;
+}
+
+/* Animations */
+@keyframes floatGentle {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes pulseWarmth {
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes shimmerEffect {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-float {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+.animate-pulse-warm {
+  animation: pulseWarmth 4s ease-in-out infinite;
+}
+
+.text-shimmer-gold {
+  background: linear-gradient(90deg, #F4EEFF 0%, #FFB347 35%, #F5A3C7 65%, #F4EEFF 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmerEffect 7s linear infinite;
+}
+
+/* Japanese Brush Stroke Backdrop */
+.brush-stroke-red {
+  position: relative;
+}
+
+.brush-stroke-red::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 65%;
+  transform: translate(-50%, -50%) rotate(-2deg);
+  background: radial-gradient(ellipse at center, rgba(224, 82, 156, 0.45) 0%, rgba(190, 24, 93, 0.3) 50%, transparent 80%);
+  filter: blur(12px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
