@@ -32,23 +32,10 @@ export default function SkillsSection() {
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         
         {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1A1033] border border-[#E0529C]/40 mb-3 shadow-[0_0_15px_rgba(224,82,156,0.2)]">
-          <Flame size={12} className="text-[#FFB347]" />
-          <span className="eyebrow-red text-[11px] tracking-[0.25em]">
-            TECH ECOSYSTEM // INVENTORY GRIMOIRE
-          </span>
-        </div>
-
         {/* Section Heading */}
         <h2 className="font-display text-3xl sm:text-5xl md:text-6xl uppercase font-extrabold tracking-[0.02em] text-[#F4EEFF] text-center mb-3">
-          ARSENAL OF CAPABILITIES
+          TECH ECOSYSTEM 
         </h2>
-
-        <p className="text-sm sm:text-base text-[#F4EEFF]/70 max-w-2xl text-center font-light mb-14">
-          Koleksi instrumen teknis dan keahlian rekayasa perangkat lunak yang diasah selama 5+ tahun
-          untuk menghadirkan produk digital tangguh berstandar industri.
-        </p>
-
         {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {skillCategories.map((category) => (

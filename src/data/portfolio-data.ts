@@ -71,10 +71,10 @@ export const PORTFOLIO_DATA = {
   ],
   projects: [
     {
-      id: 'nexa-store',
+      id: 'nusa hire',
       category: 'Full Stack',
       categoryLabel: 'CARD 01 // COMMERCE ASTRAL',
-      title: 'Nexa Store',
+      title: 'nusa hire',
       tagline: 'Next-Gen E-Commerce & Inventory Engine',
       description:
         'Platform e-commerce performa tinggi dengan server-side rendering, faceted search secepat kilat, dan integrasi payment gateway otomatis bertaraf enterprise.',
@@ -86,7 +86,7 @@ export const PORTFOLIO_DATA = {
       elementColor: '#7B5CFF',
       accentGlow: 'rgba(123, 92, 255, 0.45)',
       githubUrl: 'https://github.com',
-      liveUrl: 'https://sammy.gt.tc',
+      liveUrl: 'https://nusahire-theta.vercel.app/',
       caseStudy: {
         challenge:
           'Mengatasi latensi inventaris katalog 50.000+ SKU dan checkout drops pada jaringan mobile.',

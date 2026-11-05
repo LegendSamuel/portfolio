@@ -162,29 +162,24 @@ export default function ProjectCarousel() {
     >
       {/* Background Subtle Textured Grid */}
       <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(#5B3FD1_1.5px,transparent_1.5px)] [background-size:24px_24px]" />
-      
+
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-gradient-to-r from-[#5B3FD1]/15 via-[#E0529C]/15 to-[#7B5CFF]/15 blur-[150px] pointer-events-none" />
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-        
+
         {/* Header Block with Line Masking */}
         <div className="carousel-header flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1A1033] border border-[#E0529C]/40 mb-3 shadow-[0_0_15px_rgba(224,82,156,0.2)]">
             <Sparkles size={12} className="text-[#F5A3C7]" />
             <span className="eyebrow-red text-[11px] tracking-[0.25em]">
-              COLLECTIBLE WORKS // ARTIFACT CAROUSEL
+              COLLECTIBLE WORKS // My Project
             </span>
           </div>
 
           <h2 className="font-display text-3xl sm:text-5xl md:text-6xl uppercase font-extrabold tracking-[0.02em] text-[#F4EEFF] mb-3">
-            CHRONICLES OF SHIPPED REALMS
+            My Portofolio Project
           </h2>
-
-          <p className="text-sm sm:text-base text-[#F4EEFF]/70 max-w-2xl font-light mb-12">
-            Tiga kartu mistis berwujud artifak koleksi. Gerakkan kursor untuk 3D tilt, atau klik
-            kartu tengah untuk membalikkan (3D Flip) tampak depan dan ukiran ornamen kartu.
-          </p>
         </div>
 
         {/* 3 Portrait Cards Carousel (Perspective 1200px) */}
@@ -200,11 +195,10 @@ export default function ProjectCarousel() {
             return (
               <div
                 key={`${project.id}-${position}`}
-                className={`carousel-card-item transition-all duration-700 ease-out flex flex-col items-center ${
-                  isCenter
-                    ? 'z-30 scale-100 opacity-100 w-[290px] sm:w-[340px] md:w-[390px]'
-                    : 'hidden sm:flex z-10 scale-[0.85] opacity-60 hover:opacity-85 cursor-pointer w-[240px] sm:w-[270px] md:w-[300px]'
-                }`}
+                className={`carousel-card-item transition-all duration-700 ease-out flex flex-col items-center ${isCenter
+                  ? 'z-30 scale-100 opacity-100 w-[290px] sm:w-[340px] md:w-[390px]'
+                  : 'hidden sm:flex z-10 scale-[0.85] opacity-60 hover:opacity-85 cursor-pointer w-[240px] sm:w-[270px] md:w-[300px]'
+                  }`}
                 onClick={() => {
                   if (!isCenter) {
                     if (position === 'left') prevProject();
@@ -231,24 +225,22 @@ export default function ProjectCarousel() {
 
                   {/* Inner Rotating 3D Flip Card */}
                   <div
-                    className={`relative w-full h-full rounded-2xl transform-style-3d transition-transform duration-700 ease-out ${
-                      isFlipped ? 'rotate-y-180' : ''
-                    } ${
-                      isCenter
+                    className={`relative w-full h-full rounded-2xl transform-style-3d transition-transform duration-700 ease-out ${isFlipped ? 'rotate-y-180' : ''
+                      } ${isCenter
                         ? 'shadow-[0_20px_60px_rgba(91,63,209,0.55),0_0_35px_rgba(224,82,156,0.3)] border-2 border-[#7B5CFF]'
                         : 'shadow-[0_10px_30px_rgba(0,0,0,0.6)] border border-[#7B5CFF]/30'
-                    }`}
+                      }`}
                   >
-                    
+
                     {/* ================= CARD FRONT ================= */}
                     <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden backface-hidden bg-[#0B0818] flex flex-col justify-between p-3.5 border border-[#7B5CFF]/40">
-                      
+
                       {/* Top Label Banner (Category & Rank) */}
                       <div className="relative z-10 flex items-center justify-between pb-2 border-b border-white/10">
                         <span className="font-condensed text-[10px] text-[#F5A3C7] tracking-[0.2em] font-bold">
                           {project.categoryLabel}
                         </span>
-                        
+
                         <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#5B3FD1]/40 border border-[#7B5CFF]/60 text-[10px] font-mono text-white">
                           <span className="text-[#FFB347] font-bold">{project.cardRank}</span>
                           <span className="text-[#F4EEFF]/60">|</span>
@@ -266,7 +258,7 @@ export default function ProjectCarousel() {
                           className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0818] via-transparent to-transparent opacity-60" />
-                        
+
                         {/* 3D Flip Hint Pill on Center Card */}
                         {isCenter && (
                           <div className="absolute top-2 right-2 px-2.5 py-1 rounded-md bg-[#0B0818]/85 backdrop-blur-sm border border-white/20 text-[9px] font-condensed tracking-widest text-[#F4EEFF]/90 flex items-center gap-1.5 shadow-sm">
@@ -387,7 +379,7 @@ export default function ProjectCarousel() {
 
         {/* Carousel Navigation Bottom Bar */}
         <div className="carousel-controls mt-8 flex items-center justify-between max-w-md w-full px-4">
-          
+
           {/* Previous Button */}
           <button
             onClick={prevProject}
@@ -405,11 +397,10 @@ export default function ProjectCarousel() {
                 key={i}
                 onClick={() => setActiveIndex(i)}
                 aria-label={`Jump to project ${i + 1}`}
-                className={`h-1.5 rounded-full overflow-hidden transition-all duration-500 ${
-                  activeIndex === i
-                    ? 'w-9 bg-[#E0529C] shadow-[0_0_12px_rgba(224,82,156,0.8)]'
-                    : 'w-3.5 bg-white/20 hover:bg-white/40'
-                }`}
+                className={`h-1.5 rounded-full overflow-hidden transition-all duration-500 ${activeIndex === i
+                  ? 'w-9 bg-[#E0529C] shadow-[0_0_12px_rgba(224,82,156,0.8)]'
+                  : 'w-3.5 bg-white/20 hover:bg-white/40'
+                  }`}
               >
                 <div
                   className="h-full bg-white transition-transform duration-500 origin-left"
@@ -437,7 +428,7 @@ export default function ProjectCarousel() {
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0B0818]/85 backdrop-blur-xl">
           <div className="relative w-full max-w-2xl rounded-3xl p-6 sm:p-8 bg-[#1A1033] border-2 border-[#7B5CFF]/60 shadow-[0_25px_80px_rgba(0,0,0,0.9)] max-h-[90vh] overflow-y-auto">
-            
+
             <button
               onClick={() => setSelectedProject(null)}
               className="absolute top-5 right-5 p-2 rounded-full bg-white/10 hover:bg-[#E0529C] text-white transition-colors"

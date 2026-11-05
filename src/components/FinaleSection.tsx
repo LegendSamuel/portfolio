@@ -279,7 +279,7 @@ export default function FinaleSection() {
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B0818]/80 border border-[#F5A3C7]/40 mb-6 backdrop-blur-md shadow-[0_0_25px_rgba(247,168,196,0.3)]">
           <Sparkles size={12} className="text-[#FFB347]" />
           <span className="eyebrow-red text-xs tracking-[0.25em]">
-            FINALE SCENE // THE TWILIGHT REALM
+            FINALE SCENE 
           </span>
         </div>
 
@@ -300,15 +300,9 @@ export default function FinaleSection() {
           </h2>
 
           <p className="finale-sub-title font-condensed text-xs sm:text-sm text-[#F4EEFF]/90 tracking-[0.25em] uppercase font-semibold mt-3">
-            PORTFOLIO 2026 // SENIOR FRONTEND ARCHITECT & WEB CRAFTSMAN
+            PORTFOLIO 2026
           </p>
         </div>
-
-        <p className="finale-narrative text-sm sm:text-base text-[#F4EEFF]/90 max-w-xl font-light mt-4 mb-8 leading-relaxed drop-shadow-md">
-          Matahari tenggelam, namun penciptaan dunia digital tiada henti. Mari diskusikan proyek,
-          arsitektur web, atau peluang kerjasama berkelas dunia berikutnya.
-        </p>
-
         {/* Big Translucent White/Lavender CTA Button with Soft Repeating Pulse Glow */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
           <a

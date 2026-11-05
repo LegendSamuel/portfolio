@@ -14,19 +14,13 @@ export default function TestimonialsSection() {
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1A1033] border border-[#E0529C]/40 mb-3 shadow-[0_0_15px_rgba(224,82,156,0.2)]">
           <ShieldCheck size={12} className="text-[#10B981]" />
           <span className="eyebrow-red text-[11px] tracking-[0.25em]">
-            SOCIAL PROOF // COMRADES & ALLIES
+            SOCIAL PROOF 
           </span>
         </div>
 
         <h2 className="font-display text-3xl sm:text-5xl uppercase font-extrabold tracking-[0.02em] text-[#F4EEFF] text-center mb-3">
-          WORDS FROM FELLOW LEADERS
+          FeedBack
         </h2>
-
-        <p className="text-sm sm:text-base text-[#F4EEFF]/70 max-w-xl text-center font-light mb-12">
-          Kesaksian langsung dari CTO, Lead Product Designer, dan Engineering VP yang telah berkolaborasi
-          bersama dalam meluncurkan produk digital kelas enterprise.
-        </p>
-
         {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
           {testimonials.map((item) => (

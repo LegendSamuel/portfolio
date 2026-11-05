@@ -101,8 +101,8 @@ export default function Navbar() {
     <header
       ref={navRef}
       className={`fixed top-0 inset-x-0 z-40 transition-all duration-500 ${scrolled
-          ? 'bg-[#0B0818]/85 backdrop-blur-md border-b border-[#7B5CFF]/25 shadow-[0_10px_35px_rgba(11,8,24,0.8)] py-3'
-          : 'bg-transparent py-5'
+        ? 'bg-[#0B0818]/85 backdrop-blur-md border-b border-[#7B5CFF]/25 shadow-[0_10px_35px_rgba(11,8,24,0.8)] py-3'
+        : 'bg-transparent py-5'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -114,19 +114,13 @@ export default function Navbar() {
           onClick={() => playChime()}
           className="group flex items-center gap-3 focus:outline-none focus:ring-1 focus:ring-[#E0529C] rounded-lg p-1 transition-transform duration-200 active:scale-95"
         >
-          {/* Ornate Japanese Sigil Monogram */}
-          <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#1A1033] to-[#2D1A54] border border-[#7B5CFF]/40 flex items-center justify-center shadow-[0_0_15px_rgba(123,92,255,0.3)] group-hover:border-[#E0529C] group-hover:shadow-[0_0_20px_rgba(224,82,156,0.45)] group-hover:scale-105 transition-all duration-300">
-            <span className="font-display font-bold text-xs text-[#F5A3C7] tracking-widest">
-              匠
-            </span>
-          </div>
 
           <div className="flex flex-col">
             <span className="font-display font-bold text-sm tracking-wide text-[#F4EEFF] group-hover:text-[#F5A3C7] transition-colors">
               {PORTFOLIO_DATA.personal.name.toUpperCase()}
             </span>
             <span className="font-condensed text-[10px] text-[#F4EEFF]/60 tracking-[0.2em] uppercase">
-              Web Architect // 2026
+              Web Developer // 2026
             </span>
           </div>
         </a>
@@ -143,8 +137,8 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => playChime()}
                 className={`nav-item-link relative font-condensed text-xs px-3.5 py-1.5 rounded-full tracking-[0.2em] group transition-all duration-200 ${activeSection === link.id
-                    ? 'text-white bg-[#5B3FD1] shadow-[0_0_15px_rgba(91,63,209,0.5)] font-semibold'
-                    : 'text-[#F4EEFF]/70 hover:text-white hover:bg-white/5'
+                  ? 'text-white bg-[#5B3FD1] shadow-[0_0_15px_rgba(91,63,209,0.5)] font-semibold'
+                  : 'text-[#F4EEFF]/70 hover:text-white hover:bg-white/5'
                   }`}
               >
                 <span>{link.label}</span>
@@ -158,18 +152,6 @@ export default function Navbar() {
           </nav>
 
           <div id="nav-actions" className="flex items-center gap-3">
-            {/* Sound Toggle (Ambient feedback) */}
-            <button
-              onClick={() => setAudioEnabled(!audioEnabled)}
-              className={`p-2 rounded-full border transition-all text-xs flex items-center justify-center hover:scale-105 active:scale-95 ${audioEnabled
-                  ? 'border-[#E0529C]/60 text-[#F5A3C7] bg-[#E0529C]/15 shadow-[0_0_12px_rgba(224,82,156,0.3)]'
-                  : 'border-white/10 text-[#F4EEFF]/50 hover:text-white hover:border-white/30'
-                }`}
-              title={audioEnabled ? 'Matikan Efek Suara' : 'Nyalakan Efek Suara (Game Audio)'}
-              aria-label="Audio switch"
-            >
-              {audioEnabled ? <Volume2 size={15} /> : <VolumeX size={15} />}
-            </button>
 
             {/* CTA Outline Button with Self-Drawing Border on Hover */}
             <a
@@ -177,37 +159,10 @@ export default function Navbar() {
               onClick={() => playChime()}
               className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-condensed text-xs tracking-[0.2em] uppercase text-[#F4EEFF] overflow-hidden transition-all duration-300 hover:scale-[1.04] active:scale-[0.97]"
             >
-              {/* Animated SVG Border Outline (Stroke-dashoffset self-draw) */}
-              <svg
-                className="absolute inset-0 w-full h-full pointer-events-none rounded-full"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="1"
-                  y="1"
-                  width="calc(100% - 2px)"
-                  height="calc(100% - 2px)"
-                  rx="9999"
-                  ry="9999"
-                  fill="none"
-                  stroke="url(#outline-grad)"
-                  strokeWidth="1.5"
-                  strokeDasharray="300"
-                  strokeDashoffset="180"
-                  className="transition-all duration-700 ease-out group-hover:stroke-dashoffset-0 group-hover:stroke-[#E0529C]"
-                />
-                <defs>
-                  <linearGradient id="outline-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#7B5CFF" />
-                    <stop offset="50%" stopColor="#E0529C" />
-                    <stop offset="100%" stopColor="#FFB347" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              
 
               {/* Background gradient on hover */}
               <span className="absolute inset-0 bg-gradient-to-r from-[#E0529C]/15 to-[#5B3FD1]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-full" />
-
               <MessageSquare size={13} className="text-[#F5A3C7] group-hover:text-white transition-colors group-hover:-translate-y-0.5" />
               <span className="font-bold">LET&apos;S TALK</span>
               <span className="w-1.5 h-1.5 rounded-full bg-[#FFB347] animate-pulse" />
@@ -240,8 +195,8 @@ export default function Navbar() {
                 playChime();
               }}
               className={`font-condensed text-sm py-2 px-3 rounded-lg tracking-[0.2em] transition-colors ${activeSection === link.id
-                  ? 'text-[#F5A3C7] bg-[#5B3FD1]/20 font-bold border-l-2 border-[#E0529C]'
-                  : 'text-[#F4EEFF]/70 hover:text-white'
+                ? 'text-[#F5A3C7] bg-[#5B3FD1]/20 font-bold border-l-2 border-[#E0529C]'
+                : 'text-[#F4EEFF]/70 hover:text-white'
                 }`}
             >
               {link.label}
