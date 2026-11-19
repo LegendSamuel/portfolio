@@ -250,7 +250,7 @@ export default function HeroSection({ ready = true }: HeroSectionProps) {
             {/* Tech Stack Horizontal Strip with Small Labels */}
             <div className="w-full pt-4 border-t border-[#7B5CFF]/20">
               <span className="font-condensed text-[10px] text-[#F4EEFF]/50 tracking-[0.2em] block mb-3 uppercase">
-                // ARSENAL & WEAPONRY STACK
+                // TECH STACK & TOOLS
               </span>
 
               <div className="flex flex-wrap items-center gap-2.5">

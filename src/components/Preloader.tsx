@@ -40,9 +40,9 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         });
       } else {
         setPercent(current);
-        if (current > 70) setStatusText('Menghubungkan Jaringan 60 FPS...');
-        else if (current > 40) setStatusText('Membuka Grimoire Komponen...');
-        else if (current > 15) setStatusText('Memuat Artifak Sinematik...');
+        if (current > 70) setStatusText('Menyiapkan Antarmuka...');
+        else if (current > 40) setStatusText('Memuat Komponen...');
+        else if (current > 15) setStatusText('Memuat Konten Portofolio...');
       }
     }, 40);
 

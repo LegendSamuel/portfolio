@@ -186,7 +186,7 @@ export default function AboutSection() {
             <div className="about-eyebrow inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1A1033] border border-[#E0529C]/40 mb-4 shadow-[0_0_15px_rgba(224,82,156,0.2)] will-change-transform">
               <span className="w-1.5 h-1.5 rounded-full bg-[#E0529C] animate-pulse" />
               <span className="eyebrow-red text-[11px] tracking-[0.25em]">
-                DESIGN & CODE MASTERY
+                ABOUT // SOFTWARE ENGINEERING
               </span>
             </div>
 
@@ -194,12 +194,12 @@ export default function AboutSection() {
             <h2 className="font-display text-3xl sm:text-5xl md:text-6xl uppercase font-extrabold tracking-[0.02em] leading-[1.05] text-[#F4EEFF] mb-6">
               <div className="overflow-hidden">
                 <div className="about-title-line will-change-transform">
-                  TRANSLATING COMPLEXITY
+                  BUILDING SCALABLE
                 </div>
               </div>
               <div className="overflow-hidden">
                 <div className="about-title-line text-transparent bg-clip-text bg-gradient-to-r from-[#F5A3C7] via-[#B79CFF] to-[#FFB347] will-change-transform">
-                  INTO DIGITAL MAGIC
+                  WEB EXPERIENCES
                 </div>
               </div>
             </h2>
@@ -207,14 +207,10 @@ export default function AboutSection() {
             {/* Narrative Description */}
             <div className="flex flex-col gap-4 text-sm sm:text-base text-[#F4EEFF]/80 font-light leading-relaxed mb-8">
               <p className="about-desc-p">
-                Saya mendedikasikan keahlian teknik untuk merekayasa antarmuka web yang tidak hanya
-                memiliki estetika kelas poster AAA, namun juga bertopang pada arsitektur kode modern,
-                skalabilitas komponen modular, dan performa 60 FPS tanpa jeda.
+                Saya fokus mengembangkan antarmuka website dan aplikasi web modern yang mengutamakan clean code, arsitektur modular, performa responsif, dan kemudahan navigasi pengguna.
               </p>
               <p className="about-desc-p text-xs sm:text-sm text-[#F4EEFF]/65">
-                Setiap detail micro-interaction, transisi antar halaman, hingga optimasi metrik Core Web
-                Vitals diperhitungkan secara presisi demi memastikan pengguna merasakan pengalaman
-                digital yang mulus, responsif, dan meningkatkan rasio konversi secara maksimal.
+                Mulai dari integrasi frontend React & Next.js dengan API backend, optimasi performa Core Web Vitals, hingga tampilan responsif di berbagai perangkat untuk memberikan hasil optimal bagi pengguna dan bisnis.
               </p>
             </div>
 
@@ -223,25 +219,25 @@ export default function AboutSection() {
               <div className="about-principle-badge p-3 rounded-xl bg-[#1A1033]/80 border border-[#7B5CFF]/30 flex flex-col gap-1">
                 <div className="flex items-center gap-1.5 text-[#38BDF8]">
                   <Zap size={14} />
-                  <span className="font-display font-bold text-xs text-white">0.6s Load</span>
+                  <span className="font-display font-bold text-xs text-white">Fast Loading</span>
                 </div>
-                <span className="text-[10px] text-[#F4EEFF]/60 font-mono">Ultra-fast FCP</span>
+                <span className="text-[10px] text-[#F4EEFF]/60 font-mono">Optimized FCP</span>
               </div>
 
               <div className="about-principle-badge p-3 rounded-xl bg-[#1A1033]/80 border border-[#7B5CFF]/30 flex flex-col gap-1">
                 <div className="flex items-center gap-1.5 text-[#E0529C]">
                   <Sparkles size={14} />
-                  <span className="font-display font-bold text-xs text-white">60 FPS</span>
+                  <span className="font-display font-bold text-xs text-white">Responsive UI</span>
                 </div>
-                <span className="text-[10px] text-[#F4EEFF]/60 font-mono">Fluid GPU Motion</span>
+                <span className="text-[10px] text-[#F4EEFF]/60 font-mono">Mobile & Desktop</span>
               </div>
 
               <div className="about-principle-badge p-3 rounded-xl bg-[#1A1033]/80 border border-[#7B5CFF]/30 flex flex-col gap-1">
                 <div className="flex items-center gap-1.5 text-[#10B981]">
                   <ShieldCheck size={14} />
-                  <span className="font-display font-bold text-xs text-white">Strict TS</span>
+                  <span className="font-display font-bold text-xs text-white">Clean Code</span>
                 </div>
-                <span className="text-[10px] text-[#F4EEFF]/60 font-mono">Type-safe Clean Code</span>
+                <span className="text-[10px] text-[#F4EEFF]/60 font-mono">Structured & Modular</span>
               </div>
             </div>
 
@@ -252,7 +248,7 @@ export default function AboutSection() {
                 href="#projects"
                 className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#F4EEFF] hover:bg-[#B79CFF] text-[#0B0818] font-condensed text-xs tracking-[0.2em] font-bold shadow-[0_0_25px_rgba(244,238,255,0.4)] hover:shadow-[0_0_35px_rgba(183,156,255,0.6)] overflow-hidden transition-all duration-300 will-change-transform"
               >
-                <span>VIEW CASE STUDY // INVENTORY</span>
+                <span>LIHAT PORTOFOLIO</span>
                 <ArrowUpRight size={15} />
                 {/* Shine Sweep Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-700 pointer-events-none" />
@@ -273,7 +269,7 @@ export default function AboutSection() {
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1A1033] border border-[#7B5CFF]/40 text-[#F4EEFF] font-condensed text-xs tracking-[0.2em] hover:border-[#E0529C] hover:text-[#F5A3C7] hover:scale-105 active:scale-95 transition-all duration-300"
               >
                 <Code size={14} className="text-[#38BDF8]" />
-                <span>EXPLORE TECH ARSENAL</span>
+                <span>SKILL & TEKNOLOGI</span>
               </a>
             </div>
 
@@ -284,18 +280,18 @@ export default function AboutSection() {
                   <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
                   <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                   <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                  <span className="text-[11px] text-[#F4EEFF]/60 ml-2">architect.config.ts</span>
+                  <span className="text-[11px] text-[#F4EEFF]/60 ml-2">developer.config.ts</span>
                 </div>
                 <div className="flex items-center gap-1.5 text-[10px] text-[#10B981]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-ping" />
-                  <span>ONLINE // ACTIVE</span>
+                  <span>ONLINE // AVAILABLE</span>
                 </div>
               </div>
 
               <div className="p-4 text-[#F4EEFF]/75 space-y-1 overflow-x-auto leading-relaxed">
                 <div>
-                  <span className="text-[#7B5CFF]">const</span> <span className="text-[#38BDF8]">architect</span>:{' '}
-                  <span className="text-[#F5A3C7]">Developer</span> = {'{'}
+                  <span className="text-[#7B5CFF]">const</span> <span className="text-[#38BDF8]">developer</span>:{' '}
+                  <span className="text-[#F5A3C7]">Profile</span> = {'{'}
                 </div>
                 <div className="pl-4">
                   name: <span className="text-[#FFB347]">&apos;{personal.name}&apos;</span>,
@@ -308,13 +304,13 @@ export default function AboutSection() {
                 </div>
                 <div className="pl-4">
                   coreStack: [
-                  <span className="text-[#38BDF8]">&apos;Next.js 15&apos;</span>,{' '}
-                  <span className="text-[#38BDF8]">&apos;React 19&apos;</span>,{' '}
+                  <span className="text-[#38BDF8]">&apos;Next.js&apos;</span>,{' '}
+                  <span className="text-[#38BDF8]">&apos;React&apos;</span>,{' '}
                   <span className="text-[#38BDF8]">&apos;TypeScript&apos;</span>,{' '}
                   <span className="text-[#38BDF8]">&apos;Tailwind CSS&apos;</span>],
                 </div>
                 <div className="pl-4">
-                  philosophy: () =&gt; <span className="text-[#10B981]">&apos;Pixel Perfection + 60 FPS Fluidity&apos;</span>
+                  focus: () =&gt; <span className="text-[#10B981]">&apos;Modern Web, Clean Architecture & Responsive Design&apos;</span>
                 </div>
                 <div>{'};'}</div>
               </div>
@@ -352,15 +348,14 @@ export default function AboutSection() {
                 <div className="relative z-10 p-5 bg-[#0B0818] border-t border-white/10 flex flex-col gap-2">
                   <div className="flex items-center justify-between">
                     <span className="font-condensed text-xs text-[#F5A3C7] tracking-[0.2em] font-bold">
-                      MASTER CRAFT DOMAIN
+                      WEB DEVELOPMENT
                     </span>
                     <span className="text-[11px] font-mono text-[#FFB347]">
-                      EST. 2019 - 2026
+                      EST. 2024 - 2026
                     </span>
                   </div>
                   <p className="text-xs text-[#F4EEFF]/70 font-light">
-                    Sistem arsitektur web dirancang dengan prinsip modularitas tinggi, menjamin
-                    kecepatan render kilat pada perangkat desktop maupun mobile.
+                    Membangun website modern dengan arsitektur modular, performa cepat, dan tampilan responsif di desktop maupun mobile.
                   </p>
                 </div>
 

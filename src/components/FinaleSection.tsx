@@ -359,30 +359,6 @@ export default function FinaleSection() {
                   waktu &lt; 24 jam dijamin.
                 </p>
               </div>
-
-              <div className="flex flex-col gap-3 font-mono text-xs">
-                {/* Real-time Clock */}
-                <div className="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-[#FFB347]/10 text-[#FFB347]">
-                    <Clock size={16} />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-[10px] text-[#F4EEFF]/50 uppercase">Jakarta Time (WIB UTC+7)</span>
-                    <span className="font-bold text-[#F4EEFF]">{timeJakarta || '09:00:00 WIB'}</span>
-                  </div>
-                </div>
-
-                {/* Working Location */}
-                <div className="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-[#38BDF8]/10 text-[#38BDF8]">
-                    <Globe size={16} />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-[10px] text-[#F4EEFF]/50 uppercase">Availability</span>
-                    <span className="font-bold text-[#10B981]">Worldwide Remote // Open</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div className="lg:col-span-7">
@@ -463,7 +439,7 @@ export default function FinaleSection() {
                     type="submit"
                     className="mt-1 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#5B3FD1] via-[#7B5CFF] to-[#E0529C] text-white font-condensed font-bold text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(224,82,156,0.5)] hover:shadow-[0_0_35px_rgba(245,163,199,0.7)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                   >
-                    <span>TRANSMIT PACT MESSAGE</span>
+                    <span>KIRIM PESAN</span>
                     <Send size={14} />
                   </button>
                 </form>
