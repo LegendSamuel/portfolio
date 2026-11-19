@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { ExternalLink, RotateCw, ChevronLeft, ChevronRight, Sparkles, X, Info } from 'lucide-react';
+import { ExternalLink, RotateCw, ChevronLeft, ChevronRight, Sparkles, X, Info, Play, Pause } from 'lucide-react';
 import { GithubIcon } from '@/components/SocialIcons';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,6 +13,7 @@ export default function ProjectCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [flippedCards, setFlippedCards] = useState<Record<number, boolean>>({});
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   const sectionRef = useRef<HTMLElement | null>(null);
   const cardsContainerRef = useRef<HTMLDivElement | null>(null);
@@ -33,6 +34,17 @@ export default function ProjectCarousel() {
       [index]: !prev[index],
     }));
   };
+
+  // Smooth Auto-Play carousel loop with pause on interaction
+  useEffect(() => {
+    if (!isAutoPlay || selectedProject) return;
+
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % total);
+    }, 4500);
+
+    return () => clearInterval(timer);
+  }, [isAutoPlay, selectedProject, total]);
 
   // GSAP Entrance & Exit Scroll Storytelling
   useEffect(() => {
@@ -378,48 +390,71 @@ export default function ProjectCarousel() {
         </div>
 
         {/* Carousel Navigation Bottom Bar */}
-        <div className="carousel-controls mt-8 flex items-center justify-between max-w-md w-full px-4">
+        <div className="carousel-controls mt-8 flex flex-col items-center gap-3 max-w-md w-full px-4">
+          <div className="flex items-center justify-between w-full">
+            {/* Previous Button */}
+            <button
+              onClick={prevProject}
+              className="group flex items-center gap-1.5 font-condensed text-xs tracking-[0.2em] text-[#F4EEFF]/70 hover:text-white transition-all py-2 px-3 rounded-lg hover:bg-white/5 active:scale-95"
+              aria-label="Previous Project Card"
+            >
+              <ChevronLeft size={16} className="text-[#F5A3C7] group-hover:-translate-x-1 transition-transform" />
+              <span>‹ PREV</span>
+            </button>
 
-          {/* Previous Button */}
-          <button
-            onClick={prevProject}
-            className="group flex items-center gap-1.5 font-condensed text-xs tracking-[0.2em] text-[#F4EEFF]/70 hover:text-white transition-all py-2 px-3 rounded-lg hover:bg-white/5 active:scale-95"
-            aria-label="Previous Project Card"
-          >
-            <ChevronLeft size={16} className="text-[#F5A3C7] group-hover:-translate-x-1 transition-transform" />
-            <span>‹ PREVIOUS</span>
-          </button>
+            {/* Segmented Progress Bar (scaleX smooth fill) */}
+            <div className="flex items-center gap-2">
+              {projects.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveIndex(i)}
+                  aria-label={`Jump to project ${i + 1}`}
+                  className={`h-1.5 rounded-full overflow-hidden transition-all duration-500 ${activeIndex === i
+                    ? 'w-9 bg-[#E0529C] shadow-[0_0_12px_rgba(224,82,156,0.8)]'
+                    : 'w-3.5 bg-white/20 hover:bg-white/40'
+                    }`}
+                >
+                  <div
+                    className="h-full bg-white transition-transform duration-500 origin-left"
+                    style={{ transform: activeIndex === i ? 'scaleX(1)' : 'scaleX(0)' }}
+                  />
+                </button>
+              ))}
+            </div>
 
-          {/* Segmented Progress Bar (scaleX smooth fill) */}
-          <div className="flex items-center gap-2">
-            {projects.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveIndex(i)}
-                aria-label={`Jump to project ${i + 1}`}
-                className={`h-1.5 rounded-full overflow-hidden transition-all duration-500 ${activeIndex === i
-                  ? 'w-9 bg-[#E0529C] shadow-[0_0_12px_rgba(224,82,156,0.8)]'
-                  : 'w-3.5 bg-white/20 hover:bg-white/40'
-                  }`}
-              >
-                <div
-                  className="h-full bg-white transition-transform duration-500 origin-left"
-                  style={{ transform: activeIndex === i ? 'scaleX(1)' : 'scaleX(0)' }}
-                />
-              </button>
-            ))}
+            {/* Next Button */}
+            <button
+              onClick={nextProject}
+              className="group flex items-center gap-1.5 font-condensed text-xs tracking-[0.2em] text-[#F4EEFF]/70 hover:text-white transition-all py-2 px-3 rounded-lg hover:bg-white/5 active:scale-95"
+              aria-label="Next Project Card"
+            >
+              <span>NEXT ›</span>
+              <ChevronRight size={16} className="text-[#F5A3C7] group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
 
-          {/* Next Button */}
-          <button
-            onClick={nextProject}
-            className="group flex items-center gap-1.5 font-condensed text-xs tracking-[0.2em] text-[#F4EEFF]/70 hover:text-white transition-all py-2 px-3 rounded-lg hover:bg-white/5 active:scale-95"
-            aria-label="Next Project Card"
-          >
-            <span>NEXT ›</span>
-            <ChevronRight size={16} className="text-[#F5A3C7] group-hover:translate-x-1 transition-transform" />
-          </button>
-
+          {/* Autoplay & Guide indicator */}
+          <div className="flex items-center gap-4 text-[11px] font-mono text-[#F4EEFF]/50">
+            <button
+              onClick={() => setIsAutoPlay(!isAutoPlay)}
+              className="inline-flex items-center gap-1.5 hover:text-white transition-colors py-1 px-2.5 rounded-full bg-white/5 border border-white/10"
+              title={isAutoPlay ? 'Jeda rotasi otomatis' : 'Mulai rotasi otomatis'}
+            >
+              {isAutoPlay ? (
+                <>
+                  <Pause size={11} className="text-[#10B981]" />
+                  <span>Auto Rotate: ON</span>
+                </>
+              ) : (
+                <>
+                  <Play size={11} className="text-[#F5A3C7]" />
+                  <span>Auto Rotate: OFF</span>
+                </>
+              )}
+            </button>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline text-[#F4EEFF]/40">Gunakan panah atau klik kartu samping untuk navigasi</span>
+          </div>
         </div>
 
       </div>

@@ -273,65 +273,58 @@ export default function FinaleSection() {
       </div>
 
       {/* ================= CONTENT CONTAINER ================= */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center my-auto">
+      <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center my-auto">
         
         {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B0818]/80 border border-[#F5A3C7]/40 mb-6 backdrop-blur-md shadow-[0_0_25px_rgba(247,168,196,0.3)]">
-          <Sparkles size={12} className="text-[#FFB347]" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1A1033]/90 border border-[#E0529C]/40 mb-6 backdrop-blur-md shadow-[0_0_20px_rgba(224,82,156,0.25)]">
+          <Sparkles size={13} className="text-[#F5A3C7]" />
           <span className="eyebrow-red text-xs tracking-[0.25em]">
-            FINALE SCENE // GET IN TOUCH
+            GET IN TOUCH // CONTACT
           </span>
         </div>
 
-        {/* Massive Glowing Logotype with Red Japanese Brush Stroke Behind */}
-        <div className="relative my-4 flex flex-col items-center">
-          {/* Red Japanese Brush Stroke (Wipes from left to right via GSAP) */}
-          <div
-            ref={brushStrokeRef}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[75%] bg-gradient-to-r from-[#BE185D]/40 via-[#E0529C]/50 to-[#BE185D]/40 blur-xl rounded-full pointer-events-none -z-10 will-change-transform"
-          />
-
-          {/* Samuel Setiawan Logotype */}
+        {/* Name Title & Subtitle */}
+        <div className="relative my-3 flex flex-col items-center">
           <h2
             ref={logotypeRef}
-            className="font-logotype text-3xl sm:text-5xl md:text-6xl lg:text-7xl uppercase text-[#F4EEFF] drop-shadow-[0_0_35px_rgba(244,238,255,0.7)] will-change-transform"
+            className="font-display font-extrabold text-3xl sm:text-5xl md:text-6xl tracking-wider uppercase text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)] will-change-transform"
           >
             SAMUEL SETIAWAN
           </h2>
 
-          <p className="finale-sub-title font-condensed text-xs sm:text-sm text-[#F4EEFF]/90 tracking-[0.25em] uppercase font-semibold mt-3">
-            PORTFOLIO 2026 // WEB DEVELOPER
+          <p className="finale-sub-title font-condensed text-xs sm:text-sm text-[#F5A3C7] tracking-[0.25em] uppercase font-bold mt-3">
+            WEB DEVELOPER // 2026
           </p>
         </div>
 
-        <p className="finale-narrative text-sm sm:text-base text-[#F4EEFF]/90 max-w-xl font-light mt-4 mb-8 leading-relaxed drop-shadow-md">
-          Tertarik untuk bekerja sama, membangun proyek website, atau mendiskusikan peluang baru? Jangan ragu untuk menghubungi saya melalui kontak di bawah atau unduh resume saya.
+        <p className="finale-narrative text-sm sm:text-base text-[#F4EEFF]/85 max-w-xl font-light mt-3 mb-8 leading-relaxed">
+          Tertarik untuk berkolaborasi, membangun website modern, atau mendiskusikan peluang kerja sama? Silakan kirim pesan melalui formulir di bawah atau hubungi saya langsung.
         </p>
 
-        {/* Big Translucent White/Lavender CTA Button with Soft Repeating Pulse Glow */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
+        {/* Quick CTA Actions */}
+        <div className="flex flex-wrap items-center justify-center gap-3.5 mb-12">
           <a
             ref={ctaBtnRef}
             href="#inquiry-box"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/20 hover:bg-white/30 border border-white/50 text-white font-condensed text-sm tracking-[0.2em] font-extrabold backdrop-blur-xl shadow-[0_0_35px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(247,168,196,0.6)] hover:scale-[1.04] active:scale-[0.97] transition-all duration-300"
+            className="group relative inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#5B3FD1] via-[#7B5CFF] to-[#E0529C] text-white font-condensed text-xs tracking-[0.2em] font-bold shadow-[0_0_25px_rgba(123,92,255,0.4)] hover:shadow-[0_0_35px_rgba(224,82,156,0.6)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
           >
-            <span>START A PROJECT</span>
-            <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform" />
+            <span>HUBUNGI SAYA</span>
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </a>
 
           <a
             href="/cv-samuel-setiawan.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[#5B3FD1]/40 hover:bg-[#5B3FD1]/70 border border-[#7B5CFF]/60 text-white font-condensed text-sm tracking-[0.15em] font-bold backdrop-blur-xl shadow-[0_0_25px_rgba(123,92,255,0.3)] hover:scale-[1.04] active:scale-[0.97] transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#FFB347] text-white font-condensed text-xs tracking-[0.15em] font-bold backdrop-blur-md hover:scale-[1.03] active:scale-[0.98] transition-all"
           >
-            <FileText size={16} className="text-[#FFB347]" />
+            <FileText size={15} className="text-[#FFB347]" />
             <span>DOWNLOAD CV (ATS)</span>
           </a>
 
           <button
             onClick={handleCopyEmail}
-            className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-[#0B0818]/60 hover:bg-[#0B0818]/80 border border-white/20 text-[#F4EEFF] font-mono text-xs backdrop-blur-md hover:scale-105 active:scale-95 transition-all"
+            className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-[#0B0818]/70 hover:bg-[#0B0818] border border-white/15 hover:border-[#F5A3C7] text-[#F4EEFF] font-mono text-xs backdrop-blur-md hover:scale-[1.03] active:scale-[0.98] transition-all"
             title="Salin Email ke Clipboard"
           >
             {copied ? <Check size={14} className="text-[#10B981]" /> : <Copy size={14} className="text-[#F5A3C7]" />}
@@ -342,22 +335,29 @@ export default function FinaleSection() {
         {/* Interactive Inquiry Form Box */}
         <div
           id="inquiry-box"
-          className="w-full max-w-4xl p-6 sm:p-10 rounded-3xl bg-[#0B0818]/80 border border-[#7B5CFF]/40 backdrop-blur-2xl shadow-[0_25px_80px_rgba(0,0,0,0.85)] text-left will-change-transform"
+          className="w-full max-w-3xl p-6 sm:p-9 rounded-2xl bg-[#0B0818]/90 border border-[#7B5CFF]/30 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.8)] text-left will-change-transform"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            <div className="lg:col-span-5 flex flex-col justify-between gap-6">
+            <div className="lg:col-span-5 flex flex-col gap-4">
               <div>
                 <span className="font-condensed text-xs text-[#F5A3C7] tracking-[0.2em] uppercase font-bold">
-                  DIRECT LINE
+                  DIRECT MESSAGE
                 </span>
                 <h3 className="font-display font-bold text-2xl text-white mt-1">
                   Mulai Kolaborasi
                 </h3>
                 <p className="text-xs sm:text-sm text-[#F4EEFF]/70 font-light mt-2 leading-relaxed">
-                  Tuliskan rencana proyek, jadwal peluncuran, atau scope kebutuhan Anda. Respon dalam
-                  waktu &lt; 24 jam dijamin.
+                  Tuliskan ide proyek, kebutuhan website, atau pertanyaan Anda. Saya akan merespons dalam waktu 24 jam.
                 </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3 font-mono text-xs">
+                <Globe size={16} className="text-[#38BDF8]" />
+                <div className="flex flex-col">
+                  <span className="text-[10px] text-[#F4EEFF]/50 uppercase">Lokasi / Status</span>
+                  <span className="font-semibold text-white">Jakarta, Indonesia • Open to Work</span>
+                </div>
               </div>
             </div>
 
@@ -369,8 +369,7 @@ export default function FinaleSection() {
                   </div>
                   <h4 className="font-display font-bold text-lg text-white">Pesan Berhasil Terkirim!</h4>
                   <p className="text-xs text-[#F4EEFF]/70 mt-1 max-w-xs">
-                    Terima kasih telah menghubungi saya. Saya akan segera meninjau pesan Anda dan membalas
-                    melalui email.
+                    Terima kasih telah menghubungi. Saya akan segera membaca pesan Anda dan membalas melalui email.
                   </p>
                 </div>
               ) : (
@@ -385,21 +384,21 @@ export default function FinaleSection() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="e.g. Raditya Pratama"
+                        placeholder="Nama Anda"
                         className="px-3.5 py-2.5 rounded-xl bg-[#140E26] border border-white/10 text-xs sm:text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#E0529C] focus:ring-1 focus:ring-[#E0529C] transition-all"
                       />
                     </div>
 
                     <div className="flex flex-col gap-1">
                       <label className="font-condensed text-[11px] text-[#F4EEFF]/70 uppercase tracking-wider">
-                        Email Perusahaan / Pribadi
+                        Email
                       </label>
                       <input
                         type="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="raditya@startup.com"
+                        placeholder="email@domain.com"
                         className="px-3.5 py-2.5 rounded-xl bg-[#140E26] border border-white/10 text-xs sm:text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#E0529C] focus:ring-1 focus:ring-[#E0529C] transition-all"
                       />
                     </div>
@@ -407,37 +406,37 @@ export default function FinaleSection() {
 
                   <div className="flex flex-col gap-1">
                     <label className="font-condensed text-[11px] text-[#F4EEFF]/70 uppercase tracking-wider">
-                      Fokus Kebutuhan
+                      Kebutuhan / Layanan
                     </label>
                     <select
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       className="px-3.5 py-2.5 rounded-xl bg-[#140E26] border border-white/10 text-xs sm:text-sm text-white focus:outline-none focus:border-[#E0529C] focus:ring-1 focus:ring-[#E0529C] transition-all"
                     >
-                      <option value="Landing Page & Frontend Architecture">Landing Page Berkinerja Tinggi (Game / AAA Style)</option>
-                      <option value="Full-Stack Web Application / SaaS">Pengembangan Aplikasi Web / SaaS Modern</option>
-                      <option value="Frontend Modernization & Performance">Modernisasi Frontend & Audit 100/100 Core Vitals</option>
-                      <option value="Consultancy & Web Architecture">Konsultasi Arsitektur Digital & Design System</option>
+                      <option value="Landing Page & Web Modern">Pembuatan Landing Page & Website Modern</option>
+                      <option value="Full-Stack Web App">Pengembangan Aplikasi Web (Full Stack)</option>
+                      <option value="Frontend Development">Frontend Development & Responsive Design</option>
+                      <option value="Kolaborasi / Lainnya">Kolaborasi Proyek / Kesempatan Kerja</option>
                     </select>
                   </div>
 
                   <div className="flex flex-col gap-1">
                     <label className="font-condensed text-[11px] text-[#F4EEFF]/70 uppercase tracking-wider">
-                      Ringkasan Kebutuhan
+                      Pesan
                     </label>
                     <textarea
                       required
                       rows={3}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Ceritakan tentang proyek Anda, target waktu, dan ekspektasi yang diinginkan..."
+                      placeholder="Tuliskan detail proyek atau pesan Anda di sini..."
                       className="px-3.5 py-2.5 rounded-xl bg-[#140E26] border border-white/10 text-xs sm:text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#E0529C] focus:ring-1 focus:ring-[#E0529C] transition-all resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="mt-1 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#5B3FD1] via-[#7B5CFF] to-[#E0529C] text-white font-condensed font-bold text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(224,82,156,0.5)] hover:shadow-[0_0_35px_rgba(245,163,199,0.7)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                    className="mt-1 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#5B3FD1] via-[#7B5CFF] to-[#E0529C] text-white font-condensed font-bold text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(224,82,156,0.4)] hover:shadow-[0_0_30px_rgba(245,163,199,0.6)] hover:scale-[1.01] active:scale-[0.99] transition-all duration-300"
                   >
                     <span>KIRIM PESAN</span>
                     <Send size={14} />
