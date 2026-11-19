@@ -185,12 +185,12 @@ export default function ProjectCarousel() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1A1033] border border-[#E0529C]/40 mb-3 shadow-[0_0_15px_rgba(224,82,156,0.2)]">
             <Sparkles size={12} className="text-[#F5A3C7]" />
             <span className="eyebrow-red text-[11px] tracking-[0.25em]">
-              My Project
+              MY PROJECTS
             </span>
           </div>
 
           <h2 className="font-display text-3xl sm:text-5xl md:text-6xl uppercase font-extrabold tracking-[0.02em] text-[#F4EEFF] mb-3">
-            My Portofolio Project
+            Featured Portfolio Projects
           </h2>
         </div>
 
@@ -230,7 +230,7 @@ export default function ProjectCarousel() {
                       toggleFlip(idx);
                     }
                   }}
-                  title={isCenter ? 'Klik untuk membalik kartu (3D Flip)' : 'Pilih kartu ini'}
+                  title={isCenter ? 'Click to flip the card (3D Flip)' : 'Select this card'}
                 >
                   {/* Dynamic Shine Glare Sweep during flip/hover */}
                   <div className="card-shine-sweep absolute inset-0 -translate-x-[150%] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none z-40 rounded-2xl opacity-0" />
@@ -361,7 +361,7 @@ export default function ProjectCarousel() {
                         />
                         <div className="absolute bottom-4 inset-x-4 p-2 rounded-xl bg-[#0B0818]/85 backdrop-blur-md border border-[#E0529C]/50 flex items-center justify-center gap-2 text-[10px] font-condensed tracking-widest text-[#F5A3C7]">
                           <RotateCw size={11} className="text-[#FFB347]" />
-                          <span>CARD BACK // KLIK UNTUK BALIK KE DEPAN</span>
+                          <span>CARD BACK // CLICK TO FLIP TO FRONT</span>
                         </div>
                       </div>
                     </div>
@@ -380,7 +380,7 @@ export default function ProjectCarousel() {
                       className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1A1033] border border-[#7B5CFF]/40 text-[#F4EEFF]/80 font-condensed text-[11px] tracking-wider hover:border-[#E0529C] hover:text-white hover:scale-105 active:scale-95 transition-all"
                     >
                       <RotateCw size={11} className="text-[#FFB347]" />
-                      <span>{isFlipped ? 'TAMPILKAN DEPAN' : 'TAMPILKAN CARD BACK'}</span>
+                      <span>{isFlipped ? 'SHOW FRONT' : 'SHOW CARD BACK'}</span>
                     </button>
                   </div>
                 )}
@@ -399,7 +399,7 @@ export default function ProjectCarousel() {
               aria-label="Previous Project Card"
             >
               <ChevronLeft size={16} className="text-[#F5A3C7] group-hover:-translate-x-1 transition-transform" />
-              <span>‹ PREV</span>
+              <span>← PREV</span>
             </button>
 
             {/* Segmented Progress Bar (scaleX smooth fill) */}
@@ -428,7 +428,7 @@ export default function ProjectCarousel() {
               className="group flex items-center gap-1.5 font-condensed text-xs tracking-[0.2em] text-[#F4EEFF]/70 hover:text-white transition-all py-2 px-3 rounded-lg hover:bg-white/5 active:scale-95"
               aria-label="Next Project Card"
             >
-              <span>NEXT ›</span>
+              <span>NEXT →</span>
               <ChevronRight size={16} className="text-[#F5A3C7] group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -438,7 +438,7 @@ export default function ProjectCarousel() {
             <button
               onClick={() => setIsAutoPlay(!isAutoPlay)}
               className="inline-flex items-center gap-1.5 hover:text-white transition-colors py-1 px-2.5 rounded-full bg-white/5 border border-white/10"
-              title={isAutoPlay ? 'Jeda rotasi otomatis' : 'Mulai rotasi otomatis'}
+              title={isAutoPlay ? 'Pause auto-rotation' : 'Start auto-rotation'}
             >
               {isAutoPlay ? (
                 <>
@@ -453,7 +453,7 @@ export default function ProjectCarousel() {
               )}
             </button>
             <span className="hidden sm:inline">•</span>
-            <span className="hidden sm:inline text-[#F4EEFF]/40">Gunakan panah atau klik kartu samping untuk navigasi</span>
+            <span className="hidden sm:inline text-[#F4EEFF]/40">Use arrows or click side cards to navigate</span>
           </div>
         </div>
 

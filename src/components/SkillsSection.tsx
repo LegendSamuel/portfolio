@@ -1,6 +1,6 @@
 'use client';
 
-import { Sparkles, Terminal, Palette, Database, Server, Flame } from 'lucide-react';
+import { Sparkles, Terminal, Palette, Database, Server } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/data/portfolio-data';
 
 export default function SkillsSection() {
@@ -31,11 +31,11 @@ export default function SkillsSection() {
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         
-        {/* Eyebrow */}
         {/* Section Heading */}
-        <h2 className="font-display text-3xl sm:text-5xl md:text-6xl uppercase font-extrabold tracking-[0.02em] text-[#F4EEFF] text-center mb-3">
-          TECH ECOSYSTEM 
+        <h2 className="font-display text-3xl sm:text-5xl md:text-6xl uppercase font-extrabold tracking-[0.02em] text-[#F4EEFF] text-center mb-10">
+          TECH ECOSYSTEM
         </h2>
+
         {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {skillCategories.map((category) => (

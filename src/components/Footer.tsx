@@ -21,7 +21,7 @@ export default function Footer() {
             SS
           </div>
           <span>
-            © {personal.year} {personal.name}. All digital rights reserved.
+            © {personal.year} {personal.name}. All rights reserved.
           </span>
         </div>
 
@@ -50,7 +50,7 @@ export default function Footer() {
           <a
             href={`mailto:${personal.email}`}
             className="p-2 rounded-xl bg-white/5 border border-white/10 hover:border-[#E0529C] hover:text-[#F5A3C7] text-white transition-all"
-            aria-label="Kirim Email"
+            aria-label="Send Email"
           >
             <Mail size={15} />
           </a>
@@ -60,9 +60,9 @@ export default function Footer() {
         <button
           onClick={scrollToTop}
           className="group flex items-center gap-2 text-[#F4EEFF]/70 hover:text-white transition-colors"
-          aria-label="Kembali ke atas"
+          aria-label="Back to top"
         >
-          <span className="font-condensed text-xs tracking-widest uppercase">KEMBALI KE ATAS</span>
+          <span className="font-condensed text-xs tracking-widest uppercase">BACK TO TOP</span>
           <div className="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#E0529C] group-hover:-translate-y-0.5 transition-all">
             <ArrowUp size={12} className="text-[#F5A3C7]" />
           </div>

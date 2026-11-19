@@ -14,7 +14,7 @@ export default function FinaleSection() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: 'Landing Page & Frontend Architecture',
+    subject: 'Landing Page & Modern Web Development',
     message: '',
   });
 
@@ -55,7 +55,6 @@ export default function FinaleSection() {
 
     const ctx = gsap.context(() => {
       // 1. Five Parallax Layers
-      // Layer 2: Distant mountains (speed 0.2x)
       if (layerMountainRef.current) {
         gsap.to(layerMountainRef.current, {
           y: -40,
@@ -69,7 +68,6 @@ export default function FinaleSection() {
         });
       }
 
-      // Layer 3: Pagoda temple & lanterns (speed 0.5x)
       if (layerPagodaRef.current) {
         gsap.to(layerPagodaRef.current, {
           y: -80,
@@ -83,7 +81,6 @@ export default function FinaleSection() {
         });
       }
 
-      // Layer 4: Arched wooden bridge (speed 0.8x)
       if (layerBridgeRef.current) {
         gsap.to(layerBridgeRef.current, {
           y: -120,
@@ -97,7 +94,6 @@ export default function FinaleSection() {
         });
       }
 
-      // Layer 5: Foreground rock bank (speed 1.2x)
       if (layerForegroundRef.current) {
         gsap.to(layerForegroundRef.current, {
           y: -160,
@@ -128,7 +124,7 @@ export default function FinaleSection() {
         ease: 'none',
       });
 
-      // 4. Logotype Reveal: letter-spacing 0.6em -> 0.3em, blur 12px -> 0, opacity 0 -> 1 (1.4s)
+      // 4. Logotype Reveal
       const finaleTl = gsap.timeline({
         scrollTrigger: {
           trigger: logotypeRef.current,
@@ -137,7 +133,6 @@ export default function FinaleSection() {
         },
       });
 
-      // Japanese Red Brush Stroke Wipes in from left to right via clipPath
       if (brushStrokeRef.current) {
         finaleTl.fromTo(
           brushStrokeRef.current,
@@ -298,7 +293,7 @@ export default function FinaleSection() {
         </div>
 
         <p className="finale-narrative text-sm sm:text-base text-[#F4EEFF]/85 max-w-xl font-light mt-3 mb-8 leading-relaxed">
-          Tertarik untuk berkolaborasi, membangun website modern, atau mendiskusikan peluang kerja sama? Silakan kirim pesan melalui formulir di bawah atau hubungi saya langsung.
+          Interested in collaborating, building a modern website, or discussing opportunities? Send a message through the form below or reach out directly.
         </p>
 
         {/* Quick CTA Actions */}
@@ -308,7 +303,7 @@ export default function FinaleSection() {
             href="#inquiry-box"
             className="group relative inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#5B3FD1] via-[#7B5CFF] to-[#E0529C] text-white font-condensed text-xs tracking-[0.2em] font-bold shadow-[0_0_25px_rgba(123,92,255,0.4)] hover:shadow-[0_0_35px_rgba(224,82,156,0.6)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
           >
-            <span>HUBUNGI SAYA</span>
+            <span>CONTACT ME</span>
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </a>
 
@@ -325,10 +320,10 @@ export default function FinaleSection() {
           <button
             onClick={handleCopyEmail}
             className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-[#0B0818]/70 hover:bg-[#0B0818] border border-white/15 hover:border-[#F5A3C7] text-[#F4EEFF] font-mono text-xs backdrop-blur-md hover:scale-[1.03] active:scale-[0.98] transition-all"
-            title="Salin Email ke Clipboard"
+            title="Copy email to clipboard"
           >
             {copied ? <Check size={14} className="text-[#10B981]" /> : <Copy size={14} className="text-[#F5A3C7]" />}
-            <span>{copied ? 'EMAIL TERSALIN!' : personal.email}</span>
+            <span>{copied ? 'EMAIL COPIED!' : personal.email}</span>
           </button>
         </div>
 
@@ -345,18 +340,26 @@ export default function FinaleSection() {
                   DIRECT MESSAGE
                 </span>
                 <h3 className="font-display font-bold text-2xl text-white mt-1">
-                  Mulai Kolaborasi
+                  Start a Collaboration
                 </h3>
                 <p className="text-xs sm:text-sm text-[#F4EEFF]/70 font-light mt-2 leading-relaxed">
-                  Tuliskan ide proyek, kebutuhan website, atau pertanyaan Anda. Saya akan merespons dalam waktu 24 jam.
+                  Share your project idea, website needs, or questions. I&apos;ll respond within 24 hours.
                 </p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3 font-mono text-xs">
                 <Globe size={16} className="text-[#38BDF8]" />
                 <div className="flex flex-col">
-                  <span className="text-[10px] text-[#F4EEFF]/50 uppercase">Lokasi / Status</span>
-                  <span className="font-semibold text-white">Jakarta, Indonesia • Open to Work</span>
+                  <span className="text-[10px] text-[#F4EEFF]/50 uppercase">Location / Status</span>
+                  <span className="font-semibold text-white">Jakarta, Indonesia — Open to Work</span>
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3 font-mono text-xs">
+                <Clock size={16} className="text-[#FFB347]" />
+                <div className="flex flex-col">
+                  <span className="text-[10px] text-[#F4EEFF]/50 uppercase">Local Time (WIB)</span>
+                  <span className="font-semibold text-white">{timeJakarta || '--:--:--'}</span>
                 </div>
               </div>
             </div>
@@ -367,9 +370,9 @@ export default function FinaleSection() {
                   <div className="w-12 h-12 rounded-full bg-[#10B981]/20 text-[#10B981] flex items-center justify-center mb-3">
                     <Check size={24} />
                   </div>
-                  <h4 className="font-display font-bold text-lg text-white">Pesan Berhasil Terkirim!</h4>
+                  <h4 className="font-display font-bold text-lg text-white">Message Sent Successfully!</h4>
                   <p className="text-xs text-[#F4EEFF]/70 mt-1 max-w-xs">
-                    Terima kasih telah menghubungi. Saya akan segera membaca pesan Anda dan membalas melalui email.
+                    Thank you for reaching out. I&apos;ll read your message and get back to you via email soon.
                   </p>
                 </div>
               ) : (
@@ -377,14 +380,14 @@ export default function FinaleSection() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div className="flex flex-col gap-1">
                       <label className="font-condensed text-[11px] text-[#F4EEFF]/70 uppercase tracking-wider">
-                        Nama Lengkap
+                        Full Name
                       </label>
                       <input
                         type="text"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="Nama Anda"
+                        placeholder="Your name"
                         className="px-3.5 py-2.5 rounded-xl bg-[#140E26] border border-white/10 text-xs sm:text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#E0529C] focus:ring-1 focus:ring-[#E0529C] transition-all"
                       />
                     </div>
@@ -406,30 +409,30 @@ export default function FinaleSection() {
 
                   <div className="flex flex-col gap-1">
                     <label className="font-condensed text-[11px] text-[#F4EEFF]/70 uppercase tracking-wider">
-                      Kebutuhan / Layanan
+                      Service / Inquiry Type
                     </label>
                     <select
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       className="px-3.5 py-2.5 rounded-xl bg-[#140E26] border border-white/10 text-xs sm:text-sm text-white focus:outline-none focus:border-[#E0529C] focus:ring-1 focus:ring-[#E0529C] transition-all"
                     >
-                      <option value="Landing Page & Web Modern">Pembuatan Landing Page & Website Modern</option>
-                      <option value="Full-Stack Web App">Pengembangan Aplikasi Web (Full Stack)</option>
-                      <option value="Frontend Development">Frontend Development & Responsive Design</option>
-                      <option value="Kolaborasi / Lainnya">Kolaborasi Proyek / Kesempatan Kerja</option>
+                      <option value="Landing Page & Modern Web Development">Landing Page & Modern Web Development</option>
+                      <option value="Full-Stack Web Application">Full-Stack Web Application</option>
+                      <option value="Frontend Development & Responsive Design">Frontend Development & Responsive Design</option>
+                      <option value="Collaboration / Opportunities">Project Collaboration / Job Opportunity</option>
                     </select>
                   </div>
 
                   <div className="flex flex-col gap-1">
                     <label className="font-condensed text-[11px] text-[#F4EEFF]/70 uppercase tracking-wider">
-                      Pesan
+                      Message
                     </label>
                     <textarea
                       required
                       rows={3}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Tuliskan detail proyek atau pesan Anda di sini..."
+                      placeholder="Write your project details or message here..."
                       className="px-3.5 py-2.5 rounded-xl bg-[#140E26] border border-white/10 text-xs sm:text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#E0529C] focus:ring-1 focus:ring-[#E0529C] transition-all resize-none"
                     />
                   </div>
@@ -438,7 +441,7 @@ export default function FinaleSection() {
                     type="submit"
                     className="mt-1 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#5B3FD1] via-[#7B5CFF] to-[#E0529C] text-white font-condensed font-bold text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(224,82,156,0.4)] hover:shadow-[0_0_30px_rgba(245,163,199,0.6)] hover:scale-[1.01] active:scale-[0.99] transition-all duration-300"
                   >
-                    <span>KIRIM PESAN</span>
+                    <span>SEND MESSAGE</span>
                     <Send size={14} />
                   </button>
                 </form>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Sparkles, ArrowRight, Flame, Shield, Award, ChevronDown, FileText } from 'lucide-react';
+import { Sparkles, ArrowRight, Flame, FileText } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PORTFOLIO_DATA } from '@/data/portfolio-data';
@@ -12,7 +12,7 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ ready = true }: HeroSectionProps) {
-  const { personal, metrics, techStack } = PORTFOLIO_DATA;
+  const { techStack } = PORTFOLIO_DATA;
   const sectionRef = useRef<HTMLElement | null>(null);
   const characterRef = useRef<HTMLDivElement | null>(null);
   const lanternLayerRef = useRef<HTMLDivElement | null>(null);
@@ -26,7 +26,7 @@ export default function HeroSection({ ready = true }: HeroSectionProps) {
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
     const ctx = gsap.context(() => {
-      // 1. Text reveal per baris with overflow hidden mask
+      // 1. Text reveal per line with overflow hidden mask
       const tl = gsap.timeline({ delay: 0.1 });
 
       tl.fromTo(
@@ -190,8 +190,6 @@ export default function HeroSection({ ready = true }: HeroSectionProps) {
           {/* Left Column: Narrative, Line Reveal Typography & CTAs */}
           <div className="hero-text-block lg:col-span-7 flex flex-col items-start text-left will-change-transform">
 
-
-
             {/* Headline Display with Overflow Hidden Line Masks */}
             <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-7xl uppercase font-extrabold tracking-[0.02em] leading-[1.05] text-[#F4EEFF] mb-6 drop-shadow-[0_4px_25px_rgba(0,0,0,0.8)]">
               {/* Line 1 Mask */}
@@ -210,11 +208,11 @@ export default function HeroSection({ ready = true }: HeroSectionProps) {
 
             {/* Sub-headline & Bio */}
             <p className="hero-paragraph text-sm sm:text-base text-[#F4EEFF]/75 max-w-xl font-light leading-[1.75] mb-8">
-              Hi, I'm Samuel Setiawan.
-
+              Hi, I&apos;m Samuel Setiawan.
+              <br /><br />
               A passionate student and aspiring software developer who loves exploring technology, building digital experiences, and turning ideas into reality.
-
-              I'm always curious, eager to learn, and excited to create something meaningful through technology.
+              <br /><br />
+              I&apos;m always curious, eager to learn, and excited to create something meaningful through technology.
             </p>
 
             {/* Action CTA Buttons */}
@@ -223,19 +221,9 @@ export default function HeroSection({ ready = true }: HeroSectionProps) {
                 href="#projects"
                 className="group relative inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#5B3FD1] via-[#7B5CFF] to-[#E0529C] text-white font-condensed text-xs tracking-[0.2em] font-bold shadow-[0_0_30px_rgba(123,92,255,0.4)] hover:shadow-[0_0_45px_rgba(224,82,156,0.6)] hover:scale-[1.04] active:scale-[0.97] transition-all duration-300 overflow-hidden"
               >
-                <span>View My Project</span>
+                <span>View My Projects</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
                 <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 pointer-events-none" />
-              </a>
-
-              <a
-                href="/cv-samuel-setiawan.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 border border-white/25 text-[#F4EEFF] font-condensed text-xs tracking-[0.2em] font-bold hover:bg-white/20 hover:border-[#F5A3C7] hover:text-white hover:scale-[1.04] active:scale-[0.97] transition-all duration-300 backdrop-blur-sm"
-              >
-                <FileText size={14} className="text-[#FFB347]" />
-                <span>DOWNLOAD CV (ATS)</span>
               </a>
 
               <a
@@ -293,8 +281,8 @@ export default function HeroSection({ ready = true }: HeroSectionProps) {
                 {/* Character Image */}
                 <div className="relative w-full aspect-[4/3] overflow-hidden">
                   <Image
-                    src="/images/hero_character.jpg"
-                    alt="Samuel Setiawan - Digital Craftsman and Sorcerer Coder"
+                    src="/images/hero_character.png"
+                    alt="Samuel Setiawan - Digital Craftsman and Creative Engineer"
                     fill
                     priority
                     sizes="(max-width: 768px) 100vw, 500px"

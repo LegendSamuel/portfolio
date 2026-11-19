@@ -41,27 +41,27 @@ export const PORTFOLIO_DATA = {
   personal: {
     name: 'Samuel Setiawan',
     nickname: 'Sammy',
-    kanjiName: '塞缪尔 / 匠',
+    kanjiName: '開発者',
     title: 'Creative Frontend Engineer & Web Architect',
     location: 'Jakarta, Indonesia (UTC+7)',
-    availability: 'Available for World-Class Projects & Quests',
+    availability: 'Available for World-Class Projects & Collaborations',
     email: 'samuel.setiawan.dev@gmail.com',
     github: 'https://github.com/LegendSamuel',
     linkedin: 'https://linkedin.com/in/samuel-setiawan',
     resumeUrl: '/cv-samuel-setiawan.pdf',
     phone: '+628972832235',
     school: 'SMK Cinta Kasih Tzu Chi',
-    major: 'Pengembangan Perangkat Lunak dan Gim (PPLG)',
+    major: 'Software and Game Development (PPLG)',
     year: '2026',
-    bio: 'Crafting high-performance digital realms with modern reactive architectures, 60 FPS fluidity, and world-class visual aesthetics. Bridging advanced design fidelity with uncompromising clean-code engineering.',
+    bio: 'Crafting high-performance digital experiences with modern reactive architectures, 60 FPS fluidity, and world-class visual aesthetics. Bridging advanced design fidelity with uncompromising clean-code engineering.',
     extendedBio:
-      'Saya adalah seorang Creative Frontend Engineer & Web Architect yang berspesialisasi dalam membangun aplikasi web modern berkinerja tinggi, sistem desain responsif, dan antarmuka interaktif kelas dunia. Dengan keahlian mendalam pada ekosistem Next.js, React, TypeScript, dan Tailwind CSS, setiap baris kode dirancang untuk memaksimalkan Core Web Vitals, animasi tanpa latensi, dan kepuasan pengguna.',
+      'I am a Creative Frontend Engineer & Web Architect specializing in building high-performance modern web applications, responsive design systems, and world-class interactive interfaces. With deep expertise in the Next.js, React, TypeScript, and Tailwind CSS ecosystem, every line of code is crafted to maximize Core Web Vitals, latency-free animations, and user satisfaction.',
   },
   metrics: [
-    { label: 'Tahun Pengalaman', value: '5+', sub: 'Crafting Web' },
-    { label: 'Proyek Selesai', value: '42+', sub: 'Shipped to Prod' },
-    { label: 'Kepuasan Klien', value: '99.8%', sub: 'Perfect Reviews' },
-    { label: 'Tepat Waktu', value: '100%', sub: 'Milestone Precision' },
+    { label: 'Years of Experience', value: '5+', sub: 'Crafting Web' },
+    { label: 'Projects Completed', value: '42+', sub: 'Shipped to Production' },
+    { label: 'Client Satisfaction', value: '99.8%', sub: 'Perfect Reviews' },
+    { label: 'On-Time Delivery', value: '100%', sub: 'Milestone Precision' },
   ],
   techStack: [
     { name: 'Next.js 14/15', role: 'Full-Stack React Framework' },
@@ -81,7 +81,7 @@ export const PORTFOLIO_DATA = {
       title: 'MTP Studio',
       tagline: 'Modern Web Development & Agency Studio',
       description:
-        'Platform website portofolio modern untuk studio agensi web development dengan estetika interaktif, responsif, animasi halus, dan konversi bisnis tinggi.',
+        'A modern portfolio website for a web development agency featuring an interactive aesthetic, responsive layout, smooth animations, and high-conversion business presentation.',
       tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Interactive UI'],
       stats: { metric: 'Performance', val: '98+', badge: 'High Conversion' },
       image: '/images/card_mechx.jpg',
@@ -93,20 +93,21 @@ export const PORTFOLIO_DATA = {
       liveUrl: 'https://mtpstudio.vercel.app/',
       caseStudy: {
         challenge:
-          'Membangun identitas visual digital dan showcase layanan studio yang cepat, modern, dan memikat calon klien bisnis.',
+          'Build a fast, modern, and compelling digital brand identity and service showcase to attract potential business clients.',
         solution:
-          'Mengintegrasikan tata letak modular, efek tipografi interaktif, navigasi responsif, dan showcase portofolio terstruktur.',
-        impact: 'Meningkatkan engagement pengunjung serta mempermudah calon klien dalam mengajukan kolaborasi digital.',
+          'Implemented a modular layout, interactive typography effects, responsive navigation, and a structured portfolio showcase.',
+        impact:
+          'Increased visitor engagement and made it easier for prospective clients to initiate digital collaboration.',
       },
     },
     {
-      id: 'nusa hire',
+      id: 'nusa-hire',
       category: 'Full Stack',
       categoryLabel: 'CARD 02 // COMMERCE ASTRAL',
-      title: 'nusa hire',
+      title: 'Nusa Hire',
       tagline: 'Next-Gen E-Commerce & Inventory Engine',
       description:
-        'Platform e-commerce performa tinggi dengan server-side rendering, faceted search secepat kilat, dan integrasi payment gateway otomatis bertaraf enterprise.',
+        'A high-performance e-commerce platform with server-side rendering, lightning-fast faceted search, and enterprise-grade automated payment gateway integration.',
       tags: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Stripe API'],
       stats: { metric: 'Speed Index', val: '0.8s', badge: '99/100 Lighthouse' },
       image: '/images/card_nexa.jpg',
@@ -118,10 +119,11 @@ export const PORTFOLIO_DATA = {
       liveUrl: 'https://nusahire-theta.vercel.app/',
       caseStudy: {
         challenge:
-          'Mengatasi latensi inventaris katalog 50.000+ SKU dan checkout drops pada jaringan mobile.',
+          'Address inventory latency for catalogs with 50,000+ SKUs and checkout drop-offs on mobile networks.',
         solution:
-          'Mengimplementasikan Edge SSR dengan ISR caching dan arsitektur mini-cart tanpa blocking render.',
-        impact: 'Meningkatkan rasio konversi sebesar +44% dan memangkas First Contentful Paint di bawah 600ms.',
+          'Implemented Edge SSR with ISR caching and a non-blocking mini-cart architecture.',
+        impact:
+          'Increased conversion rate by 44% and reduced First Contentful Paint to under 600ms.',
       },
     },
     {
@@ -131,7 +133,7 @@ export const PORTFOLIO_DATA = {
       title: 'MechX AI',
       tagline: 'Autonomous Robotics & Telemetry Dashboard',
       description:
-        'Antarmuka kontrol robotik terdistribusi dengan visualisasi neural network real-time, grafik telemetry 60 FPS, dan streaming WebSockets tanpa latensi.',
+        'A distributed robotics control interface with real-time neural network visualization, 60 FPS telemetry charts, and low-latency WebSocket streaming.',
       tags: ['React', 'TypeScript', 'HTML5 Canvas', 'Tailwind CSS', 'WebSockets'],
       stats: { metric: 'Latency', val: '< 12ms', badge: 'Real-time Sync' },
       image: '/images/card_mechx.jpg',
@@ -143,10 +145,11 @@ export const PORTFOLIO_DATA = {
       liveUrl: 'https://sammy.gt.tc',
       caseStudy: {
         challenge:
-          'Merender ribuan data titik koordinat sensor mekatronika per detik tanpa menyebabkan frame drops di browser klien.',
+          'Render thousands of mechatronic sensor coordinate data points per second without causing frame drops in the client browser.',
         solution:
-          'Menggabungkan HTML5 Canvas 2D context dengan OffscreenCanvas Web Worker dan state buffer ganda.',
-        impact: 'Menjaga kestabilan 60 FPS bahkan saat memproses 10.000 data point per detik.',
+          'Combined HTML5 Canvas 2D context with OffscreenCanvas Web Workers and a double-buffer state strategy.',
+        impact:
+          'Maintained stable 60 FPS performance even while processing 10,000 data points per second.',
       },
     },
     {
@@ -156,7 +159,7 @@ export const PORTFOLIO_DATA = {
       title: 'Zenith Solar',
       tagline: 'Clean Energy Optimization Platform',
       description:
-        'Landing page dan portal monitoring energi terbarukan kelas enterprise. Dilengkapi kalkulator fotovoltaik interaktif dan visualisasi konsumsi real-time.',
+        'An enterprise-grade renewable energy landing page and monitoring portal featuring an interactive photovoltaic calculator and real-time consumption visualization.',
       tags: ['Next.js', 'GSAP', 'TypeScript', 'Tailwind CSS', 'SVG Graphs'],
       stats: { metric: 'Conversion Rate', val: '+38%', badge: 'Enterprise Ready' },
       image: '/images/card_zenith.jpg',
@@ -168,10 +171,11 @@ export const PORTFOLIO_DATA = {
       liveUrl: 'https://sammy.gt.tc',
       caseStudy: {
         challenge:
-          'Mempresentasikan data kalkulasi efisiensi panel surya yang rumit agar mudah dipahami prospek B2B non-teknis.',
+          'Present complex solar panel efficiency calculations in a way that is easy for non-technical B2B prospects to understand.',
         solution:
-          'Membangun interactive visual slider kalkulator dengan GSAP timeline dan dynamic SVG energy curves.',
-        impact: 'Mendorong kenaikan conversion leads B2B sebesar 38% dalam kuartal pertama.',
+          'Built an interactive visual slider calculator with GSAP timelines and dynamic SVG energy curves.',
+        impact:
+          'Drove a 38% increase in B2B lead conversions in the first quarter.',
       },
     },
     {
@@ -181,10 +185,10 @@ export const PORTFOLIO_DATA = {
       title: 'Quantum Dock',
       tagline: 'AI Agent Pipeline Orchestration',
       description:
-        'Dashboard alur kerja multi-agent AI dengan debugger prompt interaktif, token consumption streaming viewer, dan visual node graph yang elegan.',
+        'A multi-agent AI workflow dashboard with an interactive prompt debugger, token consumption streaming viewer, and an elegant node graph visualization.',
       tags: ['React', 'Zustand', 'Tailwind CSS', 'Framer Motion', 'REST API'],
       stats: { metric: 'Throughput', val: '4.2k req/s', badge: 'Low Overhead' },
-      image: '/images/card_mechx.jpg', // fallback image
+      image: '/images/card_mechx.jpg',
       cardRank: 'UR',
       element: 'Quantum',
       elementColor: '#E0529C',
@@ -193,10 +197,11 @@ export const PORTFOLIO_DATA = {
       liveUrl: 'https://sammy.gt.tc',
       caseStudy: {
         challenge:
-          'Memetakan relasi hierarkis antar autonomous AI agent dengan interaksi drag-and-drop yang intuitif.',
+          'Map hierarchical relationships between autonomous AI agents with intuitive drag-and-drop interactions.',
         solution:
-          'Mendesain node canvas berbasis Zustand state machine dengan layouting otomatis berbasis dagre.',
-        impact: 'Memangkas waktu debugging pipeline engineer hingga 50%.',
+          'Designed a node canvas based on a Zustand state machine with automatic Dagre-based layouting.',
+        impact:
+          'Reduced pipeline debugging time for engineers by 50%.',
       },
     },
     {
@@ -206,10 +211,10 @@ export const PORTFOLIO_DATA = {
       title: 'Dev Creations',
       tagline: 'Scalable Component System & Studio',
       description:
-        'Design system enterprise dan platform kolaborasi developer yang menyediakan pustaka token UI modular, dark mode adaptif, dan generator komponen.',
+        'An enterprise design system and developer collaboration platform providing a modular UI token library, adaptive dark mode, and component generation tools.',
       tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Design Tokens', 'Storybook'],
       stats: { metric: 'Components', val: '120+ Units', badge: 'WCAG AAA' },
-      image: '/images/about_mastery.jpg', // fallback image
+      image: '/images/about_mastery.jpg',
       cardRank: 'EX',
       element: 'Aether',
       elementColor: '#A855F7',
@@ -218,17 +223,18 @@ export const PORTFOLIO_DATA = {
       liveUrl: 'https://sammy.gt.tc',
       caseStudy: {
         challenge:
-          'Standardisasi konsistensi visual dan aksesibilitas lintas 4 divisi produk internal perusahaan.',
+          'Standardize visual consistency and accessibility across four internal company product divisions.',
         solution:
-          'Menyusun centralized design token compiler yang mengekspor otomatis ke Tailwind theme dan CSS variables.',
-        impact: 'Mengurangi technical debt UI hingga 65% dan mencapai skor aksesibilitas WCAG AAA 100%.',
+          'Built a centralized design token compiler that automatically exports to the Tailwind theme and CSS variables.',
+        impact:
+          'Reduced UI technical debt by 65% and achieved a 100% WCAG AAA accessibility score.',
       },
     },
   ] as ProjectItem[],
   skillCategories: [
     {
       title: 'Frontend Core',
-      subtitle: 'Pondasi antarmuka interaktif dan arsitektur reaktif',
+      subtitle: 'Foundation for interactive interfaces and reactive architecture',
       iconName: 'Code',
       color: '#7B5CFF',
       skills: [
@@ -241,7 +247,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       title: 'Styling & Motion',
-      subtitle: 'Estetika sinematik, micro-interactions, dan 60 FPS render',
+      subtitle: 'Cinematic aesthetics, micro-interactions, and 60 FPS rendering',
       iconName: 'Sparkles',
       color: '#E0529C',
       skills: [
@@ -254,7 +260,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       title: 'Backend & Data',
-      subtitle: 'Integrasi API performa tinggi, basis data, dan real-time',
+      subtitle: 'High-performance API integration, databases, and real-time systems',
       iconName: 'Database',
       color: '#FFB347',
       skills: [
@@ -267,7 +273,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       title: 'DevOps & Tooling',
-      subtitle: 'CI/CD otomatis, kontrol versi, dan deployment CDN global',
+      subtitle: 'Automated CI/CD, version control, and global CDN deployment',
       iconName: 'Cpu',
       color: '#38BDF8',
       skills: [
@@ -282,7 +288,7 @@ export const PORTFOLIO_DATA = {
   testimonials: [
     {
       quote:
-        'Kecepatan kerja Samuel sangat mengagumkan. Ia berhasil mengubah rancangan arsitektur kompleks menjadi landing page interaktif dengan performa optimal dalam hitungan hari.',
+        "Samuel's speed is impressive. He transformed a complex architectural design into an interactive, high-performance landing page in just a matter of days.",
       name: 'Rangga P.',
       role: 'Chief Technology Officer',
       company: 'Nexa Global',
@@ -290,7 +296,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       quote:
-        'Perhatian Samuel pada detail micro-interaction dan fluiditas animasi benar-benar mengangkat citra produk kami ke standar internasional. Sangat komunikatif dan proaktif.',
+        "Samuel's attention to micro-interactions and animation fluidity truly elevated our product's image to an international standard. Highly communicative and proactive.",
       name: 'Dinda Kirana',
       role: 'Lead Product Designer',
       company: 'FinFlow Tech',
@@ -298,7 +304,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       quote:
-        'Arsitektur kode yang ditulis sangat bersih, rapi, dan mudah diintegrasikan dengan tim backend kami. Skalabilitasnya terbukti andal saat lonjakan traffic peluncuran.',
+        'The code architecture he delivered was clean, well-structured, and easy for our backend team to integrate with. Its scalability proved reliable during our launch traffic spike.',
       name: 'Farhan Maulana',
       role: 'VP of Engineering',
       company: 'Bloom AI',
@@ -306,7 +312,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       quote:
-        'Samuel tidak hanya sekadar membuat website, tetapi juga memahami psikologi konversi dan performa Core Web Vitals. Hasil skor Lighthouse kami selalu 100/100.',
+        'Samuel does not just build websites — he understands conversion psychology and Core Web Vitals performance. Our Lighthouse scores consistently hit 100/100.',
       name: 'Nadia Valerie',
       role: 'Head of Growth Marketing',
       company: 'GlowWave',

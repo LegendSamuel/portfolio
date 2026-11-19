@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sammy.gt.tc"),
   title: "Samuel Setiawan — Creative Frontend Engineer & Web Architect",
   description:
-    "Portfolio Samuel Setiawan — Creative Frontend Engineer & Web Architect. Membangun dunia digital sinematik, arsitektur modern 60 FPS, dan pengalaman pengguna kelas dunia dengan nuansa AAA Game Art.",
+    "Portfolio of Samuel Setiawan — Creative Frontend Engineer & Web Architect. Building cinematic digital experiences, modern 60 FPS architectures, and world-class user interfaces.",
   keywords: [
     "Samuel Setiawan",
     "Creative Frontend Engineer",
@@ -36,21 +36,21 @@ export const metadata: Metadata = {
     "TypeScript",
     "Tailwind CSS",
     "Portfolio",
-    "Game Landing Page",
+    "Web Developer",
   ],
   authors: [{ name: "Samuel Setiawan" }],
   openGraph: {
     title: "Samuel Setiawan — Creative Frontend Engineer & Web Architect",
     description:
-      "Membangun antarmuka modern, interaktif, performa tinggi, dan berkonversi maksimal.",
+      "Building modern, interactive, high-performance interfaces that convert.",
     type: "website",
     url: "https://sammy.gt.tc",
     images: [
       {
-        url: "/images/hero_character.jpg",
+        url: "/images/hero_character.png",
         width: 1200,
         height: 630,
-        alt: "Samuel Setiawan - Digital Sorcerer & Architect",
+        alt: "Samuel Setiawan - Creative Frontend Engineer & Web Architect",
       },
     ],
   },
@@ -63,7 +63,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="id"
+      lang="en"
       className={`${cinzel.variable} ${inter.variable} ${barlowCondensed.variable} scroll-smooth`}
     >
       <body className="bg-[#0B0818] text-[#F4EEFF] font-sans antialiased overflow-x-hidden selection:bg-[#E0529C] selection:text-white">

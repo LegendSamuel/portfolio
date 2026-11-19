@@ -207,10 +207,10 @@ export default function AboutSection() {
             {/* Narrative Description */}
             <div className="flex flex-col gap-4 text-sm sm:text-base text-[#F4EEFF]/80 font-light leading-relaxed mb-8">
               <p className="about-desc-p">
-                Saya fokus mengembangkan antarmuka website dan aplikasi web modern yang mengutamakan clean code, arsitektur modular, performa responsif, dan kemudahan navigasi pengguna.
+                I focus on developing modern website and web application interfaces, prioritizing clean code, modular architecture, responsive performance, and intuitive user navigation.
               </p>
               <p className="about-desc-p text-xs sm:text-sm text-[#F4EEFF]/65">
-                Mulai dari integrasi frontend React & Next.js dengan API backend, optimasi performa Core Web Vitals, hingga tampilan responsif di berbagai perangkat untuk memberikan hasil optimal bagi pengguna dan bisnis.
+                My expertise spans integrating React & Next.js frontends with backend APIs, optimizing Core Web Vitals for performance, and ensuring responsive layouts across various devices—all to deliver optimal results for both users and businesses.
               </p>
             </div>
 
@@ -248,28 +248,20 @@ export default function AboutSection() {
                 href="#projects"
                 className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#F4EEFF] hover:bg-[#B79CFF] text-[#0B0818] font-condensed text-xs tracking-[0.2em] font-bold shadow-[0_0_25px_rgba(244,238,255,0.4)] hover:shadow-[0_0_35px_rgba(183,156,255,0.6)] overflow-hidden transition-all duration-300 will-change-transform"
               >
-                <span>LIHAT PORTOFOLIO</span>
+                <span>VIEW PORTFOLIO</span>
                 <ArrowUpRight size={15} />
                 {/* Shine Sweep Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-700 pointer-events-none" />
               </a>
 
-              <a
-                href="/cv-samuel-setiawan.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 border border-white/25 text-[#F4EEFF] font-condensed text-xs tracking-[0.2em] font-bold hover:bg-white/20 hover:border-[#FFB347] hover:text-[#FFB347] hover:scale-105 active:scale-95 transition-all duration-300"
-              >
-                <FileText size={14} className="text-[#FFB347]" />
-                <span>DOWNLOAD CV (PDF)</span>
-              </a>
+              
 
               <a
                 href="#skills"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1A1033] border border-[#7B5CFF]/40 text-[#F4EEFF] font-condensed text-xs tracking-[0.2em] hover:border-[#E0529C] hover:text-[#F5A3C7] hover:scale-105 active:scale-95 transition-all duration-300"
               >
                 <Code size={14} className="text-[#38BDF8]" />
-                <span>SKILL & TEKNOLOGI</span>
+                <span>SKILLS & TECHNOLOGIES</span>
               </a>
             </div>
 
@@ -355,7 +347,7 @@ export default function AboutSection() {
                     </span>
                   </div>
                   <p className="text-xs text-[#F4EEFF]/70 font-light">
-                    Membangun website modern dengan arsitektur modular, performa cepat, dan tampilan responsif di desktop maupun mobile.
+                    Building modern websites with modular architecture, fast performance, and responsive design for both desktop and mobile.
                   </p>
                 </div>
 

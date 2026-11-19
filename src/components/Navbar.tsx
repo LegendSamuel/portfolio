@@ -128,7 +128,7 @@ export default function Navbar() {
         {/* Right Desktop Nav Menu */}
         <div className="hidden md:flex items-center gap-6">
           <nav
-            aria-label="Navigasi Utama"
+            aria-label="Main navigation"
             className="flex items-center gap-1 px-4 py-1.5 rounded-full bg-[#1A1033]/70 border border-[#7B5CFF]/30 backdrop-blur-md shadow-inner"
           >
             {navLinks.map((link) => (
@@ -152,17 +152,6 @@ export default function Navbar() {
           </nav>
 
           <div id="nav-actions" className="flex items-center gap-3">
-            {/* Download / View CV Button */}
-            <a
-              href="/cv-samuel-setiawan.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => playChime()}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-condensed text-xs tracking-[0.15em] uppercase text-[#F4EEFF] bg-white/5 border border-white/15 hover:border-[#F5A3C7] hover:text-[#F5A3C7] transition-all duration-200"
-            >
-              <FileText size={13} className="text-[#FFB347]" />
-              <span className="font-semibold">CV / RESUME</span>
-            </a>
 
             {/* CTA Outline Button with Self-Drawing Border on Hover */}
             <a
@@ -170,13 +159,10 @@ export default function Navbar() {
               onClick={() => playChime()}
               className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-condensed text-xs tracking-[0.2em] uppercase text-[#F4EEFF] overflow-hidden transition-all duration-300 hover:scale-[1.04] active:scale-[0.97]"
             >
-
-
               {/* Background gradient on hover */}
               <span className="absolute inset-0 bg-gradient-to-r from-[#E0529C]/15 to-[#5B3FD1]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-full" />
               <MessageSquare size={13} className="text-[#F5A3C7] group-hover:text-white transition-colors group-hover:-translate-y-0.5" />
               <span className="font-bold">LET&apos;S TALK</span>
-
             </a>
           </div>
 
@@ -187,7 +173,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="p-2 rounded-xl bg-[#1A1033] border border-[#7B5CFF]/40 text-[#F4EEFF] hover:border-[#E0529C] transition-colors"
-            aria-label={mobileOpen ? 'Tutup Menu' : 'Buka Menu'}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -214,19 +200,6 @@ export default function Navbar() {
             </a>
           ))}
 
-          <a
-            href="/cv-samuel-setiawan.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => {
-              setMobileOpen(false);
-              playChime();
-            }}
-            className="flex items-center gap-2 font-condensed text-xs py-2 px-3 rounded-lg tracking-[0.2em] bg-white/5 border border-white/10 text-[#FFB347]"
-          >
-            <FileText size={14} />
-            <span>DOWNLOAD CV (ATS)</span>
-          </a>
 
           <div className="pt-3 border-t border-white/10 flex items-center justify-between">
             <button

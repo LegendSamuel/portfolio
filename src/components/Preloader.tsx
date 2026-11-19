@@ -9,7 +9,7 @@ interface PreloaderProps {
 
 export default function Preloader({ onComplete }: PreloaderProps) {
   const [percent, setPercent] = useState(0);
-  const [statusText, setStatusText] = useState('Inisialisasi Antarmuka Mistis...');
+  const [statusText, setStatusText] = useState('Initializing mystical interface...');
 
   useEffect(() => {
     let current = 0;
@@ -18,7 +18,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       if (current >= 100) {
         current = 100;
         setPercent(100);
-        setStatusText('Gerbang Digital Terbuka.');
+        setStatusText('Digital gateway unlocked.');
         clearInterval(interval);
 
         // Smooth curtain reveal
@@ -40,9 +40,9 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         });
       } else {
         setPercent(current);
-        if (current > 70) setStatusText('Menyiapkan Antarmuka...');
-        else if (current > 40) setStatusText('Memuat Komponen...');
-        else if (current > 15) setStatusText('Memuat Konten Portofolio...');
+        if (current > 70) setStatusText('Preparing interface...');
+        else if (current > 40) setStatusText('Loading components...');
+        else if (current > 15) setStatusText('Loading portfolio content...');
       }
     }, 40);
 
@@ -56,12 +56,12 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     >
       <div id="preloader-content" className="relative flex flex-col items-center max-w-xs w-full px-6 text-center">
         
-        {/* Japanese Sigil Monogram with Rotating Golden & Violet Ring */}
+        {/* Monogram with Rotating Golden & Violet Ring */}
         <div className="relative w-16 h-16 flex items-center justify-center mb-6">
           <div className="absolute inset-0 rounded-2xl border border-[#7B5CFF]/30 animate-spin" style={{ animationDuration: '14s' }} />
           <div className="absolute -inset-1 rounded-2xl border-t-2 border-[#E0529C] animate-spin" style={{ animationDuration: '2.5s' }} />
           <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1A1033] to-[#2D1A54] border border-[#7B5CFF]/50 flex items-center justify-center shadow-[0_0_25px_rgba(123,92,255,0.4)]">
-            <span className="font-display font-bold text-base text-[#F5A3C7]">匠</span>
+            <span className="font-display font-bold text-base text-[#F5A3C7]">SS</span>
           </div>
         </div>
 
