@@ -46,8 +46,12 @@ export const PORTFOLIO_DATA = {
     location: 'Jakarta, Indonesia (UTC+7)',
     availability: 'Available for World-Class Projects & Quests',
     email: 'samuel.setiawan.dev@gmail.com',
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
+    github: 'https://github.com/LegendSamuel',
+    linkedin: 'https://linkedin.com/in/samuel-setiawan',
+    resumeUrl: '/cv-samuel-setiawan.pdf',
+    phone: '+628972832235',
+    school: 'SMK Cinta Kasih Tzu Chi',
+    major: 'Pengembangan Perangkat Lunak dan Gim (PPLG)',
     year: '2026',
     bio: 'Crafting high-performance digital realms with modern reactive architectures, 60 FPS fluidity, and world-class visual aesthetics. Bridging advanced design fidelity with uncompromising clean-code engineering.',
     extendedBio:
@@ -71,9 +75,34 @@ export const PORTFOLIO_DATA = {
   ],
   projects: [
     {
+      id: 'mtp-studio',
+      category: 'Creative Web',
+      categoryLabel: 'CARD 01 // MODERN WEB STUDIO',
+      title: 'MTP Studio',
+      tagline: 'Modern Web Development & Agency Studio',
+      description:
+        'Platform website portofolio modern untuk studio agensi web development dengan estetika interaktif, responsif, animasi halus, dan konversi bisnis tinggi.',
+      tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Interactive UI'],
+      stats: { metric: 'Performance', val: '98+', badge: 'High Conversion' },
+      image: '/images/card_mechx.jpg',
+      cardRank: 'SSR',
+      element: 'Quantum',
+      elementColor: '#E0529C',
+      accentGlow: 'rgba(224, 82, 156, 0.45)',
+      githubUrl: 'https://github.com/LegendSamuel',
+      liveUrl: 'https://mtpstudio.vercel.app/',
+      caseStudy: {
+        challenge:
+          'Membangun identitas visual digital dan showcase layanan studio yang cepat, modern, dan memikat calon klien bisnis.',
+        solution:
+          'Mengintegrasikan tata letak modular, efek tipografi interaktif, navigasi responsif, dan showcase portofolio terstruktur.',
+        impact: 'Meningkatkan engagement pengunjung serta mempermudah calon klien dalam mengajukan kolaborasi digital.',
+      },
+    },
+    {
       id: 'nusa hire',
       category: 'Full Stack',
-      categoryLabel: 'CARD 01 // COMMERCE ASTRAL',
+      categoryLabel: 'CARD 02 // COMMERCE ASTRAL',
       title: 'nusa hire',
       tagline: 'Next-Gen E-Commerce & Inventory Engine',
       description:
@@ -85,7 +114,7 @@ export const PORTFOLIO_DATA = {
       element: 'Astral',
       elementColor: '#7B5CFF',
       accentGlow: 'rgba(123, 92, 255, 0.45)',
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/LegendSamuel',
       liveUrl: 'https://nusahire-theta.vercel.app/',
       caseStudy: {
         challenge:
@@ -98,7 +127,7 @@ export const PORTFOLIO_DATA = {
     {
       id: 'mechx-ai',
       category: 'Frontend',
-      categoryLabel: 'CARD 02 // CYBER ROBOTICS',
+      categoryLabel: 'CARD 03 // CYBER ROBOTICS',
       title: 'MechX AI',
       tagline: 'Autonomous Robotics & Telemetry Dashboard',
       description:
@@ -110,7 +139,7 @@ export const PORTFOLIO_DATA = {
       element: 'Cyber',
       elementColor: '#38BDF8',
       accentGlow: 'rgba(56, 189, 248, 0.45)',
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/LegendSamuel',
       liveUrl: 'https://sammy.gt.tc',
       caseStudy: {
         challenge:
@@ -123,7 +152,7 @@ export const PORTFOLIO_DATA = {
     {
       id: 'zenith-solar',
       category: 'Frontend',
-      categoryLabel: 'CARD 03 // SOLAR OPTIMIZATION',
+      categoryLabel: 'CARD 04 // SOLAR OPTIMIZATION',
       title: 'Zenith Solar',
       tagline: 'Clean Energy Optimization Platform',
       description:
@@ -135,7 +164,7 @@ export const PORTFOLIO_DATA = {
       element: 'Solar',
       elementColor: '#FFB347',
       accentGlow: 'rgba(255, 179, 71, 0.45)',
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/LegendSamuel',
       liveUrl: 'https://sammy.gt.tc',
       caseStudy: {
         challenge:
@@ -148,7 +177,7 @@ export const PORTFOLIO_DATA = {
     {
       id: 'quantum-dock',
       category: 'Frontend',
-      categoryLabel: 'CARD 04 // AI PIPELINE',
+      categoryLabel: 'CARD 05 // AI PIPELINE',
       title: 'Quantum Dock',
       tagline: 'AI Agent Pipeline Orchestration',
       description:
@@ -160,7 +189,7 @@ export const PORTFOLIO_DATA = {
       element: 'Quantum',
       elementColor: '#E0529C',
       accentGlow: 'rgba(224, 82, 156, 0.45)',
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/LegendSamuel',
       liveUrl: 'https://sammy.gt.tc',
       caseStudy: {
         challenge:
@@ -173,7 +202,7 @@ export const PORTFOLIO_DATA = {
     {
       id: 'dev-creations',
       category: 'Full Stack',
-      categoryLabel: 'CARD 05 // COMPONENT STUDIO',
+      categoryLabel: 'CARD 06 // COMPONENT STUDIO',
       title: 'Dev Creations',
       tagline: 'Scalable Component System & Studio',
       description:
@@ -185,7 +214,7 @@ export const PORTFOLIO_DATA = {
       element: 'Aether',
       elementColor: '#A855F7',
       accentGlow: 'rgba(168, 85, 247, 0.45)',
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/LegendSamuel',
       liveUrl: 'https://sammy.gt.tc',
       caseStudy: {
         challenge:

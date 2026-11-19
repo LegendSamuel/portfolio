@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Copy, Check, Clock, Globe, Send, Sparkles, ArrowRight } from 'lucide-react';
+import { Copy, Check, Clock, Globe, Send, Sparkles, ArrowRight, FileText } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PORTFOLIO_DATA } from '@/data/portfolio-data';
@@ -279,7 +279,7 @@ export default function FinaleSection() {
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B0818]/80 border border-[#F5A3C7]/40 mb-6 backdrop-blur-md shadow-[0_0_25px_rgba(247,168,196,0.3)]">
           <Sparkles size={12} className="text-[#FFB347]" />
           <span className="eyebrow-red text-xs tracking-[0.25em]">
-            FINALE SCENE 
+            FINALE SCENE // GET IN TOUCH
           </span>
         </div>
 
@@ -300,9 +300,14 @@ export default function FinaleSection() {
           </h2>
 
           <p className="finale-sub-title font-condensed text-xs sm:text-sm text-[#F4EEFF]/90 tracking-[0.25em] uppercase font-semibold mt-3">
-            PORTFOLIO 2026
+            PORTFOLIO 2026 // WEB DEVELOPER
           </p>
         </div>
+
+        <p className="finale-narrative text-sm sm:text-base text-[#F4EEFF]/90 max-w-xl font-light mt-4 mb-8 leading-relaxed drop-shadow-md">
+          Tertarik untuk bekerja sama, membangun proyek website, atau mendiskusikan peluang baru? Jangan ragu untuk menghubungi saya melalui kontak di bawah atau unduh resume saya.
+        </p>
+
         {/* Big Translucent White/Lavender CTA Button with Soft Repeating Pulse Glow */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
           <a
@@ -310,8 +315,18 @@ export default function FinaleSection() {
             href="#inquiry-box"
             className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/20 hover:bg-white/30 border border-white/50 text-white font-condensed text-sm tracking-[0.2em] font-extrabold backdrop-blur-xl shadow-[0_0_35px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(247,168,196,0.6)] hover:scale-[1.04] active:scale-[0.97] transition-all duration-300"
           >
-            <span>HIRE ME // START A PROJECT</span>
+            <span>START A PROJECT</span>
             <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform" />
+          </a>
+
+          <a
+            href="/cv-samuel-setiawan.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[#5B3FD1]/40 hover:bg-[#5B3FD1]/70 border border-[#7B5CFF]/60 text-white font-condensed text-sm tracking-[0.15em] font-bold backdrop-blur-xl shadow-[0_0_25px_rgba(123,92,255,0.3)] hover:scale-[1.04] active:scale-[0.97] transition-all"
+          >
+            <FileText size={16} className="text-[#FFB347]" />
+            <span>DOWNLOAD CV (ATS)</span>
           </a>
 
           <button

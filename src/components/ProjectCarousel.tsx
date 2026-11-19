@@ -173,7 +173,7 @@ export default function ProjectCarousel() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1A1033] border border-[#E0529C]/40 mb-3 shadow-[0_0_15px_rgba(224,82,156,0.2)]">
             <Sparkles size={12} className="text-[#F5A3C7]" />
             <span className="eyebrow-red text-[11px] tracking-[0.25em]">
-              COLLECTIBLE WORKS // My Project
+              My Project
             </span>
           </div>
 

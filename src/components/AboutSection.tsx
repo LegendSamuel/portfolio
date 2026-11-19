@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { ArrowUpRight, Code, Sparkles, Zap, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, Code, Sparkles, Zap, ShieldCheck, FileText } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PORTFOLIO_DATA } from '@/data/portfolio-data';
@@ -178,15 +178,15 @@ export default function AboutSection() {
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-          
+
           {/* Left Column: Narrative, Philosophy & Terminal */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            
+
             {/* Eyebrow sliding left to right */}
             <div className="about-eyebrow inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1A1033] border border-[#E0529C]/40 mb-4 shadow-[0_0_15px_rgba(224,82,156,0.2)] will-change-transform">
               <span className="w-1.5 h-1.5 rounded-full bg-[#E0529C] animate-pulse" />
               <span className="eyebrow-red text-[11px] tracking-[0.25em]">
-                CHRONICLES // DESIGN & CODE MASTERY
+                DESIGN & CODE MASTERY
               </span>
             </div>
 
@@ -259,6 +259,16 @@ export default function AboutSection() {
               </a>
 
               <a
+                href="/cv-samuel-setiawan.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 border border-white/25 text-[#F4EEFF] font-condensed text-xs tracking-[0.2em] font-bold hover:bg-white/20 hover:border-[#FFB347] hover:text-[#FFB347] hover:scale-105 active:scale-95 transition-all duration-300"
+              >
+                <FileText size={14} className="text-[#FFB347]" />
+                <span>DOWNLOAD CV (PDF)</span>
+              </a>
+
+              <a
                 href="#skills"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1A1033] border border-[#7B5CFF]/40 text-[#F4EEFF] font-condensed text-xs tracking-[0.2em] hover:border-[#E0529C] hover:text-[#F5A3C7] hover:scale-105 active:scale-95 transition-all duration-300"
               >
@@ -321,7 +331,7 @@ export default function AboutSection() {
               className="relative w-full max-w-lg rounded-3xl p-1.5 bg-gradient-to-b from-[#7B5CFF] via-[#E0529C]/50 to-[#120A24] shadow-[0_25px_70px_rgba(0,0,0,0.85)] group will-change-transform"
             >
               <div className="relative rounded-[22px] overflow-hidden bg-[#0B0818] border border-[#7B5CFF]/40">
-                
+
                 {/* Artwork with Inverse Parallax Inner Container */}
                 <div className="relative w-full aspect-[3/4] overflow-hidden">
                   <div ref={cardImageInnerRef} className="relative w-full h-[120%] -top-[10%] will-change-transform">
@@ -336,14 +346,6 @@ export default function AboutSection() {
 
                   {/* Gradient seamless bottom blend into mountain silhouettes */}
                   <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#0B0818] via-[#0B0818]/70 to-transparent" />
-                  
-                  {/* Floating firefly badge */}
-                  <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-[#0B0818]/80 backdrop-blur-md border border-[#FFB347]/50 flex items-center gap-2 shadow-lg">
-                    <span className="w-2 h-2 rounded-full bg-[#FFB347] animate-ping" />
-                    <span className="font-condensed text-xs text-[#FFB347] tracking-widest font-bold">
-                      ASTRAL WORKSHOP
-                    </span>
-                  </div>
                 </div>
 
                 {/* Bottom Card Integration Content */}

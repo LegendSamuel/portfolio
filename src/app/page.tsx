@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import SmoothScroll from '@/components/SmoothScroll';
-import CustomCursor from '@/components/CustomCursor';
 import Preloader from '@/components/Preloader';
 import Navbar from '@/components/Navbar';
 import ParticleCanvas from '@/components/ParticleCanvas';
@@ -22,9 +21,6 @@ export default function Home() {
       <main className="relative min-h-screen bg-[#0B0818] text-[#F4EEFF] overflow-x-hidden selection:bg-[#E0529C] selection:text-white">
         {/* Preloader with curtain reveal */}
         {!preloaderDone && <Preloader onComplete={() => setPreloaderDone(true)} />}
-
-        {/* Custom Lerp Interactive Pointer & Glowing Ring Cursor */}
-        <CustomCursor />
 
         {/* 60 FPS Particle Canvas (Kunang-kunang & Sakura) */}
         <ParticleCanvas />

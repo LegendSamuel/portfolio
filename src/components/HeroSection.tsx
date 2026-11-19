@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Sparkles, ArrowRight, Flame, Shield, Award, ChevronDown } from 'lucide-react';
+import { Sparkles, ArrowRight, Flame, Shield, Award, ChevronDown, FileText } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PORTFOLIO_DATA } from '@/data/portfolio-data';
@@ -226,6 +226,16 @@ export default function HeroSection({ ready = true }: HeroSectionProps) {
                 <span>View My Project</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
                 <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 pointer-events-none" />
+              </a>
+
+              <a
+                href="/cv-samuel-setiawan.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 border border-white/25 text-[#F4EEFF] font-condensed text-xs tracking-[0.2em] font-bold hover:bg-white/20 hover:border-[#F5A3C7] hover:text-white hover:scale-[1.04] active:scale-[0.97] transition-all duration-300 backdrop-blur-sm"
+              >
+                <FileText size={14} className="text-[#FFB347]" />
+                <span>DOWNLOAD CV (ATS)</span>
               </a>
 
               <a
